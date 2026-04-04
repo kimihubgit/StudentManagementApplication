@@ -223,7 +223,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(238, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1073, 56);
+            panel2.Size = new Size(1192, 56);
             panel2.TabIndex = 1;
             // 
             // pictureBox2
