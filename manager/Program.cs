@@ -1,3 +1,5 @@
+using manager.Views.Auth;
+
 namespace manager
 {
     internal static class Program
@@ -8,10 +10,35 @@ namespace manager
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            LoginForm loginForm = new LoginForm();
+
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                var user = loginForm.LoggedInUser;
+                if (user.Role == "Admin")
+                {
+                    //Application.Run(new AdminDashboard());
+                }
+                else if (user.Role == "Teacher")
+                {
+                    //Application.Run(new TeacherForm());
+                }
+                else if (user.Role == "Student")
+                {
+                    // Application.Run(new StudentForm()); 
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản của bạn chưa được cấp quyền truy cập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
