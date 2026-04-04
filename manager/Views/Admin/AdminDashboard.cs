@@ -1,6 +1,5 @@
 ﻿using FontAwesome.Sharp;
 using manager.Views.Admin;
-using manager.Views.Admin.TongQuan;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +7,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+
+
+using manager.Views.Admin.TongQuan;
+using manager.Views.Admin.Faculty;
 
 namespace manager.Views.Admin
 {
@@ -59,14 +62,16 @@ namespace manager.Views.Admin
             AddUserControl(ucTongQuan);
         }
 
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            usFaculty ucFaculty = new usFaculty();
+            AddUserControl(ucFaculty);
+        }
+
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
         {
 
         }

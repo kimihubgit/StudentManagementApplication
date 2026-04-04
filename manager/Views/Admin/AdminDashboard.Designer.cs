@@ -60,9 +60,8 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(272, 1015);
+            panel1.Size = new Size(238, 761);
             panel1.TabIndex = 0;
             // 
             // iconButton7
@@ -76,10 +75,9 @@
             iconButton7.IconColor = Color.White;
             iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton7.IconSize = 30;
-            iconButton7.Location = new Point(0, 549);
-            iconButton7.Margin = new Padding(3, 4, 3, 4);
+            iconButton7.Location = new Point(0, 410);
             iconButton7.Name = "iconButton7";
-            iconButton7.Size = new Size(272, 79);
+            iconButton7.Size = new Size(238, 59);
             iconButton7.TabIndex = 8;
             iconButton7.Text = "Tổng Quan";
             iconButton7.TextAlign = ContentAlignment.MiddleLeft;
@@ -97,10 +95,9 @@
             iconButton6.IconColor = Color.White;
             iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton6.IconSize = 30;
-            iconButton6.Location = new Point(0, 470);
-            iconButton6.Margin = new Padding(3, 4, 3, 4);
+            iconButton6.Location = new Point(0, 351);
             iconButton6.Name = "iconButton6";
-            iconButton6.Size = new Size(272, 79);
+            iconButton6.Size = new Size(238, 59);
             iconButton6.TabIndex = 7;
             iconButton6.Text = "Tổng Quan";
             iconButton6.TextAlign = ContentAlignment.MiddleLeft;
@@ -118,10 +115,9 @@
             iconButton5.IconColor = Color.White;
             iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton5.IconSize = 30;
-            iconButton5.Location = new Point(0, 391);
-            iconButton5.Margin = new Padding(3, 4, 3, 4);
+            iconButton5.Location = new Point(0, 292);
             iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(272, 79);
+            iconButton5.Size = new Size(238, 59);
             iconButton5.TabIndex = 6;
             iconButton5.Text = "Tổng Quan";
             iconButton5.TextAlign = ContentAlignment.MiddleLeft;
@@ -139,10 +135,9 @@
             iconButton4.IconColor = Color.White;
             iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton4.IconSize = 30;
-            iconButton4.Location = new Point(0, 312);
-            iconButton4.Margin = new Padding(3, 4, 3, 4);
+            iconButton4.Location = new Point(0, 233);
             iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(272, 79);
+            iconButton4.Size = new Size(238, 59);
             iconButton4.TabIndex = 5;
             iconButton4.Text = "Tổng Quan";
             iconButton4.TextAlign = ContentAlignment.MiddleLeft;
@@ -160,10 +155,9 @@
             iconButton3.IconColor = Color.White;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 30;
-            iconButton3.Location = new Point(0, 233);
-            iconButton3.Margin = new Padding(3, 4, 3, 4);
+            iconButton3.Location = new Point(0, 174);
             iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(272, 79);
+            iconButton3.Size = new Size(238, 59);
             iconButton3.TabIndex = 4;
             iconButton3.Text = "Tổng Quan";
             iconButton3.TextAlign = ContentAlignment.MiddleLeft;
@@ -181,12 +175,11 @@
             iconButton2.IconColor = Color.White;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 30;
-            iconButton2.Location = new Point(0, 154);
-            iconButton2.Margin = new Padding(3, 4, 3, 4);
+            iconButton2.Location = new Point(0, 115);
             iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(272, 79);
+            iconButton2.Size = new Size(238, 59);
             iconButton2.TabIndex = 3;
-            iconButton2.Text = "Tổng Quan";
+            iconButton2.Text = "Khoa";
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = true;
@@ -203,10 +196,9 @@
             iconButton1.IconColor = Color.White;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 30;
-            iconButton1.Location = new Point(0, 75);
-            iconButton1.Margin = new Padding(3, 4, 3, 4);
+            iconButton1.Location = new Point(0, 56);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(272, 79);
+            iconButton1.Size = new Size(238, 59);
             iconButton1.TabIndex = 2;
             iconButton1.Text = "Tổng Quan";
             iconButton1.TextAlign = ContentAlignment.MiddleLeft;
@@ -219,10 +211,9 @@
             pictureBox1.Dock = DockStyle.Top;
             pictureBox1.Image = Properties.Resources.default_logo_dark;
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Padding = new Padding(11, 0, 11, 0);
-            pictureBox1.Size = new Size(272, 75);
+            pictureBox1.Padding = new Padding(10, 0, 10, 0);
+            pictureBox1.Size = new Size(238, 56);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -233,18 +224,17 @@
             panelHeader.Controls.Add(label1);
             panelHeader.Controls.Add(pictureBox2);
             panelHeader.Dock = DockStyle.Top;
-            panelHeader.Location = new Point(272, 0);
-            panelHeader.Margin = new Padding(3, 4, 3, 4);
+            panelHeader.Location = new Point(238, 0);
             panelHeader.Name = "panelHeader";
-            panelHeader.Size = new Size(1226, 75);
+            panelHeader.Size = new Size(1073, 56);
             panelHeader.TabIndex = 1;
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Right;
-            label1.Location = new Point(989, 24);
+            label1.Location = new Point(865, 18);
             label1.Name = "label1";
-            label1.Size = new Size(166, 31);
+            label1.Size = new Size(145, 23);
             label1.TabIndex = 1;
             label1.Text = "Hi. Noname";
             label1.TextAlign = ContentAlignment.MiddleRight;
@@ -253,10 +243,9 @@
             // 
             pictureBox2.Dock = DockStyle.Right;
             pictureBox2.Image = Properties.Resources.user;
-            pictureBox2.Location = new Point(1161, 0);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(1016, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(65, 75);
+            pictureBox2.Size = new Size(57, 56);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
@@ -264,22 +253,20 @@
             // panel2
             // 
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(272, 75);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(238, 56);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1226, 940);
+            panel2.Size = new Size(1073, 705);
             panel2.TabIndex = 2;
             // 
             // AdminDashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.Disable;
-            ClientSize = new Size(1498, 1015);
+            ClientSize = new Size(1311, 761);
             Controls.Add(panel2);
             Controls.Add(panelHeader);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "AdminDashboard";
             Text = "AdminDashboard";
             panel1.ResumeLayout(false);
