@@ -65,6 +65,14 @@ namespace manager.Views.Auth
             Application.Exit();
         }
 
-        
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
