@@ -1,5 +1,5 @@
 using manager.Views.Auth;
-
+using manager.Views.Admin;
 namespace manager
 {
     internal static class Program
@@ -20,7 +20,7 @@ namespace manager
                 var user = loginForm.LoggedInUser;
                 if (user.Role == "Admin")
                 {
-                    //Application.Run(new AdminDashboard());
+                    Application.Run(new AdminDashboard());
                 }
                 else if (user.Role == "Teacher")
                 {

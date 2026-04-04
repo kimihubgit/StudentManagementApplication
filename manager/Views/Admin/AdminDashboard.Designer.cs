@@ -38,9 +38,8 @@
             iconButton1 = new FontAwesome.Sharp.IconButton();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            label1 = new Label();
             pictureBox2 = new PictureBox();
-            panel3 = new Panel();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -61,7 +60,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(238, 664);
+            panel1.Size = new Size(238, 761);
             panel1.TabIndex = 0;
             // 
             // iconButton7
@@ -227,42 +226,33 @@
             panel2.Size = new Size(1192, 56);
             panel2.TabIndex = 1;
             // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Right;
-            label1.Location = new Point(990, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(145, 23);
-            label1.TabIndex = 1;
-            label1.Text = "Hi. Noname";
-            label1.TextAlign = ContentAlignment.MiddleRight;
-            // 
             // pictureBox2
             // 
             pictureBox2.Dock = DockStyle.Right;
             pictureBox2.Image = Properties.Resources.user;
-            pictureBox2.Location = new Point(1135, 0);
+            pictureBox2.Location = new Point(1016, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(57, 56);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // panel3
+            // label1
             // 
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(238, 56);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1192, 608);
-            panel3.TabIndex = 2;
+            label1.Anchor = AnchorStyles.Right;
+            label1.Location = new Point(871, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(145, 23);
+            label1.TabIndex = 1;
+            label1.Text = "Hi. Noname";
+            label1.TextAlign = ContentAlignment.MiddleRight;
             // 
             // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.Disable;
-            ClientSize = new Size(1430, 664);
-            Controls.Add(panel3);
+            ClientSize = new Size(1311, 761);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "AdminDashboard";
@@ -288,6 +278,5 @@
         private Panel panel2;
         private Label label1;
         private PictureBox pictureBox2;
-        private Panel panel3;
     }
 }
