@@ -37,12 +37,13 @@
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             pictureBox1 = new PictureBox();
-            panel2 = new Panel();
-            pictureBox2 = new PictureBox();
+            panelHeader = new Panel();
             label1 = new Label();
+            pictureBox2 = new PictureBox();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
+            panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -202,6 +203,7 @@
             iconButton1.TextAlign = ContentAlignment.MiddleLeft;
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // pictureBox1
             // 
@@ -216,15 +218,25 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // panel2
+            // panelHeader
             // 
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(238, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1192, 56);
-            panel2.TabIndex = 1;
+            panelHeader.Controls.Add(label1);
+            panelHeader.Controls.Add(pictureBox2);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(238, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1073, 56);
+            panelHeader.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Right;
+            label1.Location = new Point(865, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(145, 23);
+            label1.TabIndex = 1;
+            label1.Text = "Hi. Noname";
+            label1.TextAlign = ContentAlignment.MiddleRight;
             // 
             // pictureBox2
             // 
@@ -237,15 +249,13 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // label1
+            // panel2
             // 
-            label1.Anchor = AnchorStyles.Right;
-            label1.Location = new Point(871, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(145, 23);
-            label1.TabIndex = 1;
-            label1.Text = "Hi. Noname";
-            label1.TextAlign = ContentAlignment.MiddleRight;
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(238, 56);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1073, 705);
+            panel2.TabIndex = 2;
             // 
             // AdminDashboard
             // 
@@ -254,18 +264,19 @@
             AutoValidate = AutoValidate.Disable;
             ClientSize = new Size(1311, 761);
             Controls.Add(panel2);
+            Controls.Add(panelHeader);
             Controls.Add(panel1);
             Name = "AdminDashboard";
             Text = "AdminDashboard";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
+            panelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
+        private Panel panel2;
         private Panel panel1;
         private PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton iconButton1;
@@ -275,7 +286,7 @@
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private Panel panel2;
+        private Panel panelHeader;
         private Label label1;
         private PictureBox pictureBox2;
     }
