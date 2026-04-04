@@ -43,7 +43,6 @@
             label1.Size = new Size(38, 15);
             label1.TabIndex = 0;
             label1.Text = "label1";
-
             // 
             // txtUsername
             // 
@@ -51,7 +50,6 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(724, 23);
             txtUsername.TabIndex = 1;
-
             // 
             // txtPassword
             // 
@@ -77,6 +75,7 @@
             button1.TabIndex = 4;
             button1.Text = "Đăng Nhập";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += btnLogin_Click;
             // 
             // LoginForm
             // 
