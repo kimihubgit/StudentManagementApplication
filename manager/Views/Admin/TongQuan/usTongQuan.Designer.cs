@@ -29,24 +29,25 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            panel1 = new Panel();
-            label2 = new Label();
-            svtotal = new Label();
-            panel2 = new Panel();
-            label1 = new Label();
-            label3 = new Label();
             panel3 = new Panel();
             label4 = new Label();
             label5 = new Label();
+            panel2 = new Panel();
+            label1 = new Label();
+            label3 = new Label();
+            panel1 = new Panel();
+            label2 = new Label();
+            svtotal = new Label();
             tableLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.AutoScroll = true;
+            tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
@@ -60,68 +61,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(1192, 608);
             tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.GradientInactiveCaption;
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(svtotal);
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(349, 100);
-            panel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.HotTrack;
-            label2.Location = new Point(21, 52);
-            label2.Name = "label2";
-            label2.Size = new Size(29, 32);
-            label2.TabIndex = 3;
-            label2.Text = "0";
-            // 
-            // svtotal
-            // 
-            svtotal.AutoSize = true;
-            svtotal.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            svtotal.Location = new Point(21, 14);
-            svtotal.Name = "svtotal";
-            svtotal.Size = new Size(130, 24);
-            svtotal.TabIndex = 2;
-            svtotal.Text = "Số Sinh Viên";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.GradientInactiveCaption;
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label3);
-            panel2.Location = new Point(400, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(349, 100);
-            panel2.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.HotTrack;
-            label1.Location = new Point(21, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(29, 32);
-            label1.TabIndex = 3;
-            label1.Text = "0";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(21, 14);
-            label3.Name = "label3";
-            label3.Size = new Size(130, 24);
-            label3.TabIndex = 2;
-            label3.Text = "Số Sinh Viên";
             // 
             // panel3
             // 
@@ -154,6 +93,68 @@
             label5.TabIndex = 2;
             label5.Text = "Số Sinh Viên";
             // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.GradientInactiveCaption;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(label3);
+            panel2.Location = new Point(400, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(350, 100);
+            panel2.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.HotTrack;
+            label1.Location = new Point(21, 52);
+            label1.Name = "label1";
+            label1.Size = new Size(29, 32);
+            label1.TabIndex = 3;
+            label1.Text = "0";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(21, 14);
+            label3.Name = "label3";
+            label3.Size = new Size(130, 24);
+            label3.TabIndex = 2;
+            label3.Text = "Số Sinh Viên";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.GradientInactiveCaption;
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(svtotal);
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(349, 100);
+            panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.HotTrack;
+            label2.Location = new Point(21, 52);
+            label2.Name = "label2";
+            label2.Size = new Size(29, 32);
+            label2.TabIndex = 3;
+            label2.Text = "0";
+            // 
+            // svtotal
+            // 
+            svtotal.AutoSize = true;
+            svtotal.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            svtotal.Location = new Point(21, 14);
+            svtotal.Name = "svtotal";
+            svtotal.Size = new Size(130, 24);
+            svtotal.TabIndex = 2;
+            svtotal.Text = "Số Sinh Viên";
+            // 
             // usTongQuan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -162,13 +163,14 @@
             Name = "usTongQuan";
             Size = new Size(1192, 608);
             tableLayoutPanel1.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
