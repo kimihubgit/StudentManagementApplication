@@ -40,9 +40,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(47, 40);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(60, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "Username";
             // 
             // txtUsername
             // 
@@ -63,9 +63,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(45, 117);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "Password";
             // 
             // button1
             // 
