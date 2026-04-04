@@ -38,8 +38,13 @@
             iconButton6 = new FontAwesome.Sharp.IconButton();
             iconButton7 = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
+            label1 = new Label();
+            pictureBox2 = new PictureBox();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -56,7 +61,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(238, 797);
+            panel1.Size = new Size(238, 664);
             panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -214,24 +219,58 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(pictureBox2);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(238, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1073, 56);
+            panel2.Size = new Size(1192, 56);
             panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Right;
+            label1.Location = new Point(990, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(145, 23);
+            label1.TabIndex = 1;
+            label1.Text = "Hi. Noname";
+            label1.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Dock = DockStyle.Right;
+            pictureBox2.Image = Properties.Resources.user;
+            pictureBox2.Location = new Point(1135, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(57, 56);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
+            // panel3
+            // 
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(238, 56);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1192, 608);
+            panel3.TabIndex = 2;
             // 
             // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.Disable;
-            ClientSize = new Size(1311, 797);
+            ClientSize = new Size(1430, 664);
+            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "AdminDashboard";
             Text = "AdminDashboard";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -247,5 +286,8 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private Panel panel2;
+        private Label label1;
+        private PictureBox pictureBox2;
+        private Panel panel3;
     }
 }
