@@ -19,5 +19,13 @@ namespace Manager_Student.Models
         public string ClassId { get; set; }
         [BsonRepresentation(BsonType.ObjectId)]
         public string SemesterId { get; set; }
+
+
+
+
+
+
+
+
     }
 }
