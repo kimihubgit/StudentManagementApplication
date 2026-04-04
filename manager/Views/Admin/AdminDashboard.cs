@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+using manager.Views.Admin;
+
 namespace manager.Views.Admin
 {
     public partial class AdminDashboard : Form
