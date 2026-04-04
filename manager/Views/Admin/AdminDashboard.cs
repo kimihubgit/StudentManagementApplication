@@ -59,9 +59,14 @@ namespace manager.Views.Admin
             AddUserControl(ucTongQuan);
         }
 
-        
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
         {
 
         }
