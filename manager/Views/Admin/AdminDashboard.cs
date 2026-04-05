@@ -17,6 +17,7 @@ using manager.Views.Admin.TongQuan;
 using manager.Views.Admin.Faculty;
 using manager.Views.Admin.Subject;
 using manager.Views.Admin.Student;
+using manager.Views.Admin.Teacher;
 
 namespace manager.Views.Admin
 {
@@ -95,6 +96,13 @@ namespace manager.Views.Admin
             ActivateButton(sender);
             usStudent usStudent = new usStudent();
             AddUserControl(usStudent);
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            usTeacher usTeacher = new usTeacher();
+            AddUserControl(usTeacher);
         }
 
 

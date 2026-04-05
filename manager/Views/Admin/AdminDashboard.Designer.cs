@@ -79,10 +79,11 @@
             iconButton7.Name = "iconButton7";
             iconButton7.Size = new Size(238, 59);
             iconButton7.TabIndex = 8;
-            iconButton7.Text = "Tổng Quan";
+            iconButton7.Text = "Giáo Viên";
             iconButton7.TextAlign = ContentAlignment.MiddleLeft;
             iconButton7.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton7.UseVisualStyleBackColor = true;
+            iconButton7.Click += iconButton7_Click;
             // 
             // iconButton6
             // 
