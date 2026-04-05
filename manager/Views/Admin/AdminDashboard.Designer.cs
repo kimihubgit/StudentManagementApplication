@@ -41,6 +41,7 @@
             label1 = new Label();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
+            iconButton8 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelHeader.SuspendLayout();
@@ -50,6 +51,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaptionText;
+            panel1.Controls.Add(iconButton8);
             panel1.Controls.Add(iconButton7);
             panel1.Controls.Add(iconButton6);
             panel1.Controls.Add(iconButton5);
@@ -262,6 +264,27 @@
             panel2.Size = new Size(1073, 705);
             panel2.TabIndex = 2;
             // 
+            // iconButton8
+            // 
+            iconButton8.Dock = DockStyle.Top;
+            iconButton8.FlatAppearance.BorderSize = 0;
+            iconButton8.FlatStyle = FlatStyle.Flat;
+            iconButton8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton8.ForeColor = SystemColors.Control;
+            iconButton8.IconChar = FontAwesome.Sharp.IconChar.House;
+            iconButton8.IconColor = Color.White;
+            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton8.IconSize = 30;
+            iconButton8.Location = new Point(0, 469);
+            iconButton8.Name = "iconButton8";
+            iconButton8.Size = new Size(238, 59);
+            iconButton8.TabIndex = 9;
+            iconButton8.Text = "Chuyên Ngành";
+            iconButton8.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton8.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton8.UseVisualStyleBackColor = true;
+            iconButton8.Click += iconButton8_Click;
+            // 
             // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -294,5 +317,6 @@
         private Panel panelHeader;
         private Label label1;
         private PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconButton iconButton8;
     }
 }
