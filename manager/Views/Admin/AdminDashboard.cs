@@ -111,5 +111,12 @@ namespace manager.Views.Admin
         {
 
         }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            ClassRoom.usClassRoom usClassRoom = new ClassRoom.usClassRoom();
+            AddUserControl(usClassRoom);
+        }
     }
 }
