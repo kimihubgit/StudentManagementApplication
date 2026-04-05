@@ -189,46 +189,50 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(176, 154);
+            btnAdd.Location = new Point(185, 134);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(105, 47);
             btnAdd.TabIndex = 16;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(334, 154);
+            btnUpdate.Location = new Point(334, 134);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(105, 47);
             btnUpdate.TabIndex = 17;
             btnUpdate.Text = "Sửa";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(493, 154);
+            btnDelete.Location = new Point(493, 134);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(105, 47);
             btnDelete.TabIndex = 18;
             btnDelete.Text = "Xóa";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(661, 154);
+            btnClear.Location = new Point(661, 134);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(105, 47);
             btnClear.TabIndex = 19;
             btnClear.Text = "Làm Mới";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // dgvStudents
             // 
             dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStudents.Location = new Point(60, 219);
+            dgvStudents.Location = new Point(15, 207);
             dgvStudents.Name = "dgvStudents";
-            dgvStudents.Size = new Size(849, 407);
+            dgvStudents.Size = new Size(1044, 460);
             dgvStudents.TabIndex = 20;
             // 
             // usStudent
