@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Manager_Student.Models
+namespace manager.Models
 {
     public class Teacher
     {
@@ -15,6 +15,7 @@ namespace Manager_Student.Models
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public string Degree { get; set; }
 
         [BsonRepresentation(BsonType.ObjectId)]
         public string FacultyId { get; set; }
