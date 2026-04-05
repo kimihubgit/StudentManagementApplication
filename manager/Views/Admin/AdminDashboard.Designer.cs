@@ -99,10 +99,11 @@
             iconButton6.Name = "iconButton6";
             iconButton6.Size = new Size(238, 59);
             iconButton6.TabIndex = 7;
-            iconButton6.Text = "Tổng Quan";
+            iconButton6.Text = "Học Sinh";
             iconButton6.TextAlign = ContentAlignment.MiddleLeft;
             iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton6.UseVisualStyleBackColor = true;
+            iconButton6.Click += iconButton6_Click;
             // 
             // iconButton5
             // 
@@ -119,10 +120,11 @@
             iconButton5.Name = "iconButton5";
             iconButton5.Size = new Size(238, 59);
             iconButton5.TabIndex = 6;
-            iconButton5.Text = "Tổng Quan";
+            iconButton5.Text = "Môn Học";
             iconButton5.TextAlign = ContentAlignment.MiddleLeft;
             iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton5.UseVisualStyleBackColor = true;
+            iconButton5.Click += iconButton5_Click;
             // 
             // iconButton4
             // 
@@ -180,10 +182,11 @@
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(238, 59);
             iconButton2.TabIndex = 3;
-            iconButton2.Text = "Tổng Quan";
+            iconButton2.Text = "Khoa";
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = true;
+            iconButton2.Click += iconButton2_Click;
             // 
             // iconButton1
             // 
@@ -201,7 +204,6 @@
             iconButton1.Size = new Size(238, 59);
             iconButton1.TabIndex = 2;
             iconButton1.Text = "Tổng Quan";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = true;
             iconButton1.Click += iconButton1_Click;

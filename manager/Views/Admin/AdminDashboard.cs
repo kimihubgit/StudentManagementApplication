@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using manager.Views.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +11,12 @@ using FontAwesome.Sharp;
 using manager.Views.Admin;
 using manager.Views.Admin.Teacher;
 using manager.Views.Admin.TongQuan;
+
+
+using manager.Views.Admin.TongQuan;
+using manager.Views.Admin.Faculty;
+using manager.Views.Admin.Subject;
+using manager.Views.Admin.Student;
 
 namespace manager.Views.Admin
 {
@@ -65,6 +73,28 @@ namespace manager.Views.Admin
             ActivateButton(sender);
             usTeacher ucTeacher = new usTeacher();
             AddUserControl(ucTeacher);
+        }
+
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            usFaculty ucFaculty = new usFaculty();
+            AddUserControl(ucFaculty);
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            usSubject usSubject = new usSubject();
+            AddUserControl(usSubject);
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            usStudent usStudent = new usStudent();
+            AddUserControl(usStudent);
         }
 
 

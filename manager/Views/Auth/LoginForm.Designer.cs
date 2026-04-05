@@ -38,40 +38,45 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(47, 40);
+            label1.Location = new Point(54, 53);
             label1.Name = "label1";
-            label1.Size = new Size(60, 15);
+            label1.Size = new Size(75, 20);
             label1.TabIndex = 0;
             label1.Text = "Username";
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(45, 66);
+            txtUsername.Location = new Point(51, 88);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(724, 23);
+            txtUsername.Size = new Size(827, 27);
             txtUsername.TabIndex = 1;
+            txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(43, 143);
+            txtPassword.Location = new Point(49, 191);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(726, 23);
+            txtPassword.Size = new Size(829, 27);
             txtPassword.TabIndex = 3;
+            txtPassword.Text = "in";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(45, 117);
+            label2.Location = new Point(51, 156);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(70, 20);
             label2.TabIndex = 2;
             label2.Text = "Password";
             // 
             // button1
             // 
-            button1.Location = new Point(46, 188);
+            button1.Location = new Point(53, 251);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(723, 23);
+            button1.Size = new Size(826, 31);
             button1.TabIndex = 4;
             button1.Text = "Đăng Nhập";
             button1.UseVisualStyleBackColor = true;
@@ -79,16 +84,18 @@
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 256);
+            ClientSize = new Size(914, 341);
             Controls.Add(button1);
             Controls.Add(txtPassword);
             Controls.Add(label2);
             Controls.Add(txtUsername);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LoginForm";
             Text = "LoginForm";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

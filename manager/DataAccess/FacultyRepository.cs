@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Manager_Student.Models;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using manager.DataAccess;
 using Manager_Student.Models;
 using MongoDB.Driver;
 
-namespace Manager_Student.DataAccess
+namespace manager.DataAccess
 {
     public class FacultyRepository
     {
@@ -17,14 +19,13 @@ namespace Manager_Student.DataAccess
             MongoContext context = new MongoContext();
             _facultyCollection = context.GetCollection<Faculty>("Faculties");
         }
-
-        // 1. Lấy toàn bộ danh sách Khoa (Dùng để đổ vào ComboBox trên Winform)
+        // Lấy tất cả danh sách Khoa
         public List<Faculty> GetAllFaculties()
         {
             try
             {
-                return _facultyCollection.Find(FilterDefinition<Faculty>.Empty).ToList();
-            }
+            return _facultyCollection.Find(FilterDefinition<Faculty>.Empty).ToList();
+        }
             catch (Exception ex)
             {
                 // Bạn có thể log lỗi ở đây nếu cần
@@ -39,13 +40,13 @@ namespace Manager_Student.DataAccess
             return _facultyCollection.Find(filter).FirstOrDefault();
         }
 
-        // 3. Thêm Khoa mới
+        // Thêm Khoa mới
         public void InsertFaculty(Faculty faculty)
         {
             _facultyCollection.InsertOne(faculty);
         }
 
-        // 4. Cập nhật thông tin Khoa
+        // Cập nhật Khoa
         public void UpdateFaculty(string id, Faculty faculty)
         {
             var filter = Builders<Faculty>.Filter.Eq(f => f.Id, id);
@@ -57,7 +58,7 @@ namespace Manager_Student.DataAccess
             _facultyCollection.UpdateOne(filter, update);
         }
 
-        // 5. Xóa Khoa
+        // Xóa Khoa
         public void DeleteFaculty(string id)
         {
             var filter = Builders<Faculty>.Filter.Eq(f => f.Id, id);
