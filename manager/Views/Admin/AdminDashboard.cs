@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 using manager.Views.Admin.TongQuan;
 using manager.Views.Admin.Faculty;
+using manager.Views.Admin.Student;
 
 namespace manager.Views.Admin
 {
@@ -67,6 +68,13 @@ namespace manager.Views.Admin
             ActivateButton(sender);
             usFaculty ucFaculty = new usFaculty();
             AddUserControl(ucFaculty);
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            usStudent usStudent = new usStudent();
+            AddUserControl(usStudent);
         }
 
 

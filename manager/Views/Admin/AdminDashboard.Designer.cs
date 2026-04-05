@@ -99,10 +99,11 @@
             iconButton6.Name = "iconButton6";
             iconButton6.Size = new Size(238, 59);
             iconButton6.TabIndex = 7;
-            iconButton6.Text = "Tổng Quan";
+            iconButton6.Text = "Học Sinh";
             iconButton6.TextAlign = ContentAlignment.MiddleLeft;
             iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton6.UseVisualStyleBackColor = true;
+            iconButton6.Click += iconButton6_Click;
             // 
             // iconButton5
             // 
@@ -201,7 +202,6 @@
             iconButton1.Size = new Size(238, 59);
             iconButton1.TabIndex = 2;
             iconButton1.Text = "Tổng Quan";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = true;
             iconButton1.Click += iconButton1_Click;
