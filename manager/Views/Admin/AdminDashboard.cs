@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using manager.Views.Admin;
+using manager.Views.Admin.Major;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -122,7 +123,7 @@ namespace manager.Views.Admin
         private void iconButton8_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            usMajor ucMajor = new usMajor();
+            manager.Views.Admin.Major.usMajor ucMajor = new manager.Views.Admin.Major.usMajor();
             AddUserControl(ucMajor);
         }
     }

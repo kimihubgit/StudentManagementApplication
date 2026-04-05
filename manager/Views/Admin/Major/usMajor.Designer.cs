@@ -1,4 +1,4 @@
-ï»¿namespace manager.Views.Admin
+namespace manager.Views.Admin.Major
 {
     partial class usMajor
     {
@@ -95,7 +95,7 @@
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(75, 25);
             this.btnLamMoi.TabIndex = 4;
-            this.btnLamMoi.Text = "LÃ m má»›i";
+            this.btnLamMoi.Text = "Làm m?i";
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -105,7 +105,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 25);
             this.btnThem.TabIndex = 5;
-            this.btnThem.Text = "ThÃªm";
+            this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -115,7 +115,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 25);
             this.btnSua.TabIndex = 6;
-            this.btnSua.Text = "Sá»­a";
+            this.btnSua.Text = "S?a";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -125,7 +125,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 25);
             this.btnXoa.TabIndex = 7;
-            this.btnXoa.Text = "XÃ³a";
+            this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -136,7 +136,7 @@
             this.lblMa.Name = "lblMa";
             this.lblMa.Size = new System.Drawing.Size(94, 15);
             this.lblMa.TabIndex = 8;
-            this.lblMa.Text = "MÃ£ chuyÃªn ngÃ nh";
+            this.lblMa.Text = "Mã chuyên ngành";
             // 
             // lblTen
             // 
@@ -145,7 +145,7 @@
             this.lblTen.Name = "lblTen";
             this.lblTen.Size = new System.Drawing.Size(100, 15);
             this.lblTen.TabIndex = 9;
-            this.lblTen.Text = "TÃªn chuyÃªn ngÃ nh";
+            this.lblTen.Text = "Tên chuyên ngành";
             // 
             // lblKhoa
             // 
@@ -158,8 +158,8 @@
             // 
             // usMajor
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(this.lblKhoa);
             Controls.Add(this.lblTen);
             Controls.Add(this.lblMa);
@@ -172,7 +172,7 @@
             Controls.Add(this.txtMaChuyenNganh);
             Controls.Add(this.dgvChuyenNganh);
             Name = "usMajor";
-            Size = new Size(1073, 705);
+            Size = new System.Drawing.Size(1073, 705);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenNganh)).EndInit();
             ResumeLayout(false);
             PerformLayout();
