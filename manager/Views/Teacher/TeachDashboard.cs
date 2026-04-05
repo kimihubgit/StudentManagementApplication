@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace manager.Views.Teacher
 {
-    public partial class TeacherDashboard : Form
+    public partial class TeachDashboard : Form
     {
-        public TeacherDashboard()
+        public TeachDashboard()
         {
             InitializeComponent();
         }
