@@ -118,5 +118,12 @@ namespace manager.Views.Admin
             ClassRoom.usClassRoom usClassRoom = new ClassRoom.usClassRoom();
             AddUserControl(usClassRoom);
         }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            usMajor ucMajor = new usMajor();
+            AddUserControl(ucMajor);
+        }
     }
 }

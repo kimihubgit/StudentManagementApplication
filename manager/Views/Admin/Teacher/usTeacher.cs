@@ -14,14 +14,14 @@ namespace manager.Views.Admin.Teacher
 {
     public partial class usTeacher : UserControl
     {
-        private readonly TeacherRepository _teacherCollection;
+        private readonly Manager_Student.DataAccess.TeacherRepository _teacherCollection;
         private readonly FacultyRepository _facultyCollection;
         private string _selectedId = "";
         public usTeacher()
         {
             InitializeComponent();
             
-            _teacherCollection = new TeacherRepository();
+            _teacherCollection = new Manager_Student.DataAccess.TeacherRepository();
             _facultyCollection = new FacultyRepository();
 
             LoadComboBoxKhoa();
