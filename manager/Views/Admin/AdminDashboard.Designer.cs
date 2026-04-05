@@ -120,10 +120,11 @@
             iconButton5.Name = "iconButton5";
             iconButton5.Size = new Size(238, 59);
             iconButton5.TabIndex = 6;
-            iconButton5.Text = "Tổng Quan";
+            iconButton5.Text = "Môn Học";
             iconButton5.TextAlign = ContentAlignment.MiddleLeft;
             iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton5.UseVisualStyleBackColor = true;
+            iconButton5.Click += iconButton5_Click;
             // 
             // iconButton4
             // 

@@ -5,15 +5,16 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Manager_Student.DataAccess; // Đảm bảo đúng namespace của bạn
-using Manager_Student.Models;     // Đảm bảo đúng namespace của bạn
+
+using manager.DataAccess;
+using manager.Models;
 
 namespace manager.Views.Admin.Subject
 {
     public partial class usSubject : UserControl
     {
         private readonly SubjectRepository _subjectRepo;
-        private string _selectedId = ""; // Lưu ID đang chọn để sửa/xóa
+        private string _selectedId = "";
 
         public usSubject()
         {
@@ -22,7 +23,6 @@ namespace manager.Views.Admin.Subject
             LoadData();
         }
 
-        // 1. Tải dữ liệu lên DataGridView
         private void LoadData()
         {
             try
@@ -41,7 +41,6 @@ namespace manager.Views.Admin.Subject
             }
         }
 
-        // 2. Hàm Reset các ô nhập liệu
         private void ResetInput()
         {
             txtSubjectCode.Clear();
@@ -50,8 +49,6 @@ namespace manager.Views.Admin.Subject
             _selectedId = "";
             txtSubjectCode.Focus();
         }
-
-        // 3. Nút THÊM (btnAdd)
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtSubjectCode.Text) || string.IsNullOrWhiteSpace(txtSubjectName.Text))
@@ -72,9 +69,7 @@ namespace manager.Views.Admin.Subject
             LoadData();
             ResetInput();
         }
-
-        // 4. NÚT SỬA (btnClear - theo như bạn mô tả tên nút này là btnClear)
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(_selectedId))
             {
@@ -94,8 +89,6 @@ namespace manager.Views.Admin.Subject
             LoadData();
             ResetInput();
         }
-
-        // 5. NÚT XÓA (btnDelete)
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(_selectedId))
@@ -112,13 +105,10 @@ namespace manager.Views.Admin.Subject
             }
         }
 
-        // 6. NÚT LÀM MỚI (btnUpdate - dùng để xóa trắng form)
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             ResetInput();
         }
-
-        // 7. Sự kiện click vào bảng dgvSubjects để hiện dữ liệu lên Form
         private void dgvSubjects_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

@@ -1,11 +1,13 @@
-﻿using manager.DataAccess;
-using Manager_Student.Models;
+﻿
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Manager_Student.DataAccess
+using manager.DataAccess;
+using Manager_Student.Models;
+
+namespace manager.DataAccess
 {
     public class SubjectRepository
     {
