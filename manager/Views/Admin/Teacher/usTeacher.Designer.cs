@@ -68,12 +68,12 @@
             // 
             // dgvTeachers
             // 
+            dgvTeachers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTeachers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTeachers.Location = new Point(30, 203);
             dgvTeachers.Name = "dgvTeachers";
             dgvTeachers.Size = new Size(1011, 360);
             dgvTeachers.TabIndex = 2;
-            dgvTeachers.Click += usTeacher_Load;
             // 
             // txtEmail
             // 
@@ -103,7 +103,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(852, 56);
             label3.Name = "label3";
-            label3.Size = new Size(27, 15);
+            label3.Size = new Size(28, 15);
             label3.TabIndex = 5;
             label3.Text = "SĐT";
             // 
@@ -111,7 +111,7 @@
             // 
             txtTeacherCode.Location = new Point(467, 140);
             txtTeacherCode.Name = "txtTeacherCode";
-            txtTeacherCode.Size = new Size(170, 23);
+            txtTeacherCode.Size = new Size(250, 23);
             txtTeacherCode.TabIndex = 8;
             // 
             // label4
@@ -144,20 +144,20 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(30, 577);
+            label7.Location = new Point(28, 587);
             label7.Name = "label7";
-            label7.Size = new Size(79, 15);
+            label7.Size = new Size(80, 15);
             label7.TabIndex = 11;
             label7.Text = "Tìm thông tin";
             // 
             // cboDegree
             // 
             cboDegree.FormattingEnabled = true;
+            cboDegree.Items.AddRange(new object[] { "Cử nhân", "Thạc sĩ", "Tiến sĩ", "PGS.TS" });
             cboDegree.Location = new Point(57, 140);
             cboDegree.Name = "cboDegree";
-            cboDegree.Size = new Size(193, 23);
+            cboDegree.Size = new Size(277, 23);
             cboDegree.TabIndex = 12;
-            cboDegree.Click += usTeacher_Load;
             // 
             // cboFaculty
             // 
@@ -166,20 +166,19 @@
             cboFaculty.Name = "cboFaculty";
             cboFaculty.Size = new Size(174, 23);
             cboFaculty.TabIndex = 13;
-            cboFaculty.Click += usTeacher_Load;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(115, 574);
+            txtSearch.Location = new Point(113, 584);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(404, 23);
             txtSearch.TabIndex = 14;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(582, 574);
+            btnSearch.Location = new Point(569, 578);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 23);
+            btnSearch.Size = new Size(83, 29);
             btnSearch.TabIndex = 15;
             btnSearch.Text = "Tìm";
             btnSearch.UseVisualStyleBackColor = true;
@@ -187,9 +186,9 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(686, 574);
+            btnAdd.Location = new Point(678, 578);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(75, 23);
+            btnAdd.Size = new Size(87, 29);
             btnAdd.TabIndex = 16;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = true;
@@ -197,9 +196,9 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(786, 574);
+            btnDelete.Location = new Point(787, 578);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(75, 23);
+            btnDelete.Size = new Size(81, 29);
             btnDelete.TabIndex = 17;
             btnDelete.Text = "Xóa";
             btnDelete.UseVisualStyleBackColor = true;
