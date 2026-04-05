@@ -4,9 +4,9 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
-using System.Linq; // Thêm thư viện này để dùng .Any() hoặc .ToList() tốt hơn
+using System.Linq;
 
-namespace Manager_Student.DataAccess // Đổi namespace cho khớp với cấu trúc thư mục của bạn
+namespace manager.DataAccess
 {
     public class StudentRepository
     {

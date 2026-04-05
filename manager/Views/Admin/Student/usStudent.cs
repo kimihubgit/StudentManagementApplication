@@ -1,5 +1,5 @@
-﻿using Manager_Student.DataAccess;  // Khớp với thư mục DataAccess trong ảnh
-using Manager_Student.Models;      // Khớp với thư mục Models trong ảnh
+﻿using manager.DataAccess;  // Khớp với thư mục DataAccess trong ảnh
+using manager.Models;      // Khớp với thư mục Models trong ảnh
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -82,7 +82,7 @@ namespace manager.Views.Admin.Student
             _studentRepo.InsertStudent(student);
             MessageBox.Show("Thêm sinh viên thành công!");
             LoadStudentGrid();
-            btnClear_Click(null, null); // Xóa trắng form sau khi thêm
+            btnClear_Click(null, null);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

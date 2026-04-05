@@ -57,35 +57,37 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(txtSubjectName);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(17, 49);
+            groupBox1.Location = new Point(17, 18);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(459, 421);
+            groupBox1.Size = new Size(1036, 175);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông Tin Môn Học";
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(344, 260);
+            btnClear.Location = new Point(484, 104);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(96, 32);
+            btnClear.Size = new Size(160, 47);
             btnClear.TabIndex = 11;
             btnClear.Text = "Làm Mới";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(123, 260);
+            btnUpdate.Location = new Point(158, 104);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(96, 32);
+            btnUpdate.Size = new Size(160, 47);
             btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Sửa";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(8, 155);
+            label3.Location = new Point(527, 40);
             label3.Name = "label3";
             label3.Size = new Size(61, 15);
             label3.TabIndex = 6;
@@ -93,32 +95,34 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(233, 260);
+            btnDelete.Location = new Point(324, 104);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(96, 32);
+            btnDelete.Size = new Size(154, 47);
             btnDelete.TabIndex = 9;
             btnDelete.Text = "Xóa";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(13, 260);
+            btnAdd.Location = new Point(14, 104);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(96, 32);
+            btnAdd.Size = new Size(138, 47);
             btnAdd.TabIndex = 8;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // txtSubjectCode
             // 
-            txtSubjectCode.Location = new Point(6, 58);
+            txtSubjectCode.Location = new Point(14, 58);
             txtSubjectCode.Name = "txtSubjectCode";
             txtSubjectCode.Size = new Size(226, 23);
             txtSubjectCode.TabIndex = 1;
             // 
             // nmrCredits
             // 
-            nmrCredits.Location = new Point(6, 173);
+            nmrCredits.Location = new Point(525, 58);
             nmrCredits.Name = "nmrCredits";
             nmrCredits.Size = new Size(226, 23);
             nmrCredits.TabIndex = 5;
@@ -126,7 +130,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 40);
+            label1.Location = new Point(14, 40);
             label1.Name = "label1";
             label1.Size = new Size(77, 15);
             label1.TabIndex = 2;
@@ -134,7 +138,7 @@
             // 
             // txtSubjectName
             // 
-            txtSubjectName.Location = new Point(6, 117);
+            txtSubjectName.Location = new Point(268, 58);
             txtSubjectName.Name = "txtSubjectName";
             txtSubjectName.Size = new Size(226, 23);
             txtSubjectName.TabIndex = 4;
@@ -142,7 +146,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(8, 99);
+            label2.Location = new Point(270, 40);
             label2.Name = "label2";
             label2.Size = new Size(79, 15);
             label2.TabIndex = 3;
@@ -150,10 +154,11 @@
             // 
             // dgvSubjects
             // 
+            dgvSubjects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSubjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSubjects.Location = new Point(530, 49);
+            dgvSubjects.Location = new Point(17, 199);
             dgvSubjects.Name = "dgvSubjects";
-            dgvSubjects.Size = new Size(489, 421);
+            dgvSubjects.Size = new Size(1036, 486);
             dgvSubjects.TabIndex = 1;
             // 
             // usSubject
