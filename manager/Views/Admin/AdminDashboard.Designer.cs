@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            iconButton8 = new FontAwesome.Sharp.IconButton();
             iconButton7 = new FontAwesome.Sharp.IconButton();
             iconButton6 = new FontAwesome.Sharp.IconButton();
             iconButton5 = new FontAwesome.Sharp.IconButton();
@@ -38,10 +39,9 @@
             iconButton1 = new FontAwesome.Sharp.IconButton();
             pictureBox1 = new PictureBox();
             panelHeader = new Panel();
-            label1 = new Label();
+            labelUser = new Label();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
-            iconButton8 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelHeader.SuspendLayout();
@@ -65,6 +65,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(238, 761);
             panel1.TabIndex = 0;
+            // 
+            // iconButton8
+            // 
+            iconButton8.Dock = DockStyle.Top;
+            iconButton8.FlatAppearance.BorderSize = 0;
+            iconButton8.FlatStyle = FlatStyle.Flat;
+            iconButton8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton8.ForeColor = SystemColors.Control;
+            iconButton8.IconChar = FontAwesome.Sharp.IconChar.House;
+            iconButton8.IconColor = Color.White;
+            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton8.IconSize = 30;
+            iconButton8.Location = new Point(0, 469);
+            iconButton8.Name = "iconButton8";
+            iconButton8.Size = new Size(238, 59);
+            iconButton8.TabIndex = 9;
+            iconButton8.Text = "Chuyên Ngành";
+            iconButton8.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton8.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton8.UseVisualStyleBackColor = true;
+            iconButton8.Click += iconButton8_Click;
             // 
             // iconButton7
             // 
@@ -169,7 +190,6 @@
             iconButton3.TextAlign = ContentAlignment.MiddleLeft;
             iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton3.UseVisualStyleBackColor = true;
-            iconButton3.Click += iconButton3_Click;
             // 
             // iconButton2
             // 
@@ -227,7 +247,7 @@
             // 
             // panelHeader
             // 
-            panelHeader.Controls.Add(label1);
+            panelHeader.Controls.Add(labelUser);
             panelHeader.Controls.Add(pictureBox2);
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(238, 0);
@@ -235,15 +255,15 @@
             panelHeader.Size = new Size(1073, 56);
             panelHeader.TabIndex = 1;
             // 
-            // label1
+            // labelUser
             // 
-            label1.Anchor = AnchorStyles.Right;
-            label1.Location = new Point(865, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(145, 23);
-            label1.TabIndex = 1;
-            label1.Text = "Hi. Noname";
-            label1.TextAlign = ContentAlignment.MiddleRight;
+            labelUser.Anchor = AnchorStyles.Right;
+            labelUser.Location = new Point(865, 18);
+            labelUser.Name = "labelUser";
+            labelUser.Size = new Size(145, 23);
+            labelUser.TabIndex = 1;
+            labelUser.Text = "Hi. Noname";
+            labelUser.TextAlign = ContentAlignment.MiddleRight;
             // 
             // pictureBox2
             // 
@@ -263,27 +283,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1073, 705);
             panel2.TabIndex = 2;
-            // 
-            // iconButton8
-            // 
-            iconButton8.Dock = DockStyle.Top;
-            iconButton8.FlatAppearance.BorderSize = 0;
-            iconButton8.FlatStyle = FlatStyle.Flat;
-            iconButton8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton8.ForeColor = SystemColors.Control;
-            iconButton8.IconChar = FontAwesome.Sharp.IconChar.House;
-            iconButton8.IconColor = Color.White;
-            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton8.IconSize = 30;
-            iconButton8.Location = new Point(0, 469);
-            iconButton8.Name = "iconButton8";
-            iconButton8.Size = new Size(238, 59);
-            iconButton8.TabIndex = 9;
-            iconButton8.Text = "Chuyên Ngành";
-            iconButton8.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton8.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton8.UseVisualStyleBackColor = true;
-            iconButton8.Click += iconButton8_Click;
             // 
             // AdminDashboard
             // 
@@ -315,7 +314,7 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private Panel panelHeader;
-        private Label label1;
+        private Label labelUser;
         private PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton iconButton8;
     }

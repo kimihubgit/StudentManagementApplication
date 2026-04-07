@@ -52,6 +52,10 @@ namespace Manager_Student.DataAccess
             var filter = Builders<Teacher>.Filter.Eq(t => t.Id, id);
             _teacherCollection.DeleteOne(filter);
         }
+        public long GetTeacherCount()
+        {
+            return _teacherCollection.CountDocuments(new MongoDB.Bson.BsonDocument());
+        }
 
         // 5. Tìm kiếm giảng viên theo tên hoặc mã (Hỗ trợ cho nút Tìm kiếm trên UI)
         public List<Teacher> SearchTeachers(string keyword)
