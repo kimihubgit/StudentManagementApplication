@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            iconButton9 = new FontAwesome.Sharp.IconButton();
             iconButton8 = new FontAwesome.Sharp.IconButton();
             iconButton7 = new FontAwesome.Sharp.IconButton();
             iconButton6 = new FontAwesome.Sharp.IconButton();
@@ -51,6 +52,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaptionText;
+            panel1.Controls.Add(iconButton9);
             panel1.Controls.Add(iconButton8);
             panel1.Controls.Add(iconButton7);
             panel1.Controls.Add(iconButton6);
@@ -65,6 +67,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(238, 761);
             panel1.TabIndex = 0;
+            // 
+            // iconButton9
+            // 
+            iconButton9.Dock = DockStyle.Top;
+            iconButton9.FlatAppearance.BorderSize = 0;
+            iconButton9.FlatStyle = FlatStyle.Flat;
+            iconButton9.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton9.ForeColor = SystemColors.Control;
+            iconButton9.IconChar = FontAwesome.Sharp.IconChar.House;
+            iconButton9.IconColor = Color.White;
+            iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton9.IconSize = 30;
+            iconButton9.Location = new Point(0, 528);
+            iconButton9.Name = "iconButton9";
+            iconButton9.Size = new Size(238, 59);
+            iconButton9.TabIndex = 10;
+            iconButton9.Text = "Học kì";
+            iconButton9.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton9.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton9.UseVisualStyleBackColor = true;
+            iconButton9.Click += iconButton9_Click;
             // 
             // iconButton8
             // 
@@ -317,5 +340,6 @@
         private Label labelUser;
         private PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton iconButton9;
     }
 }
