@@ -1,7 +1,4 @@
-﻿using FontAwesome.Sharp;
-using manager.Views.Admin;
-using manager.Views.Admin.Major;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using FontAwesome.Sharp;
+using manager.Public;
 using manager.Views.Admin;
-using manager.Views.Admin.Teacher;
-using manager.Views.Admin.TongQuan;
-
-
-using manager.Views.Admin.TongQuan;
+using manager.Views.Admin;
 using manager.Views.Admin.Faculty;
-using manager.Views.Admin.Subject;
+using manager.Views.Admin.Major;
 using manager.Views.Admin.Student;
+using manager.Views.Admin.Subject;
 using manager.Views.Admin.Teacher;
+using manager.Views.Admin.Teacher;
+using manager.Views.Admin.TongQuan;
+using manager.Views.Admin.TongQuan;
 
 namespace manager.Views.Admin
 {
@@ -28,8 +27,28 @@ namespace manager.Views.Admin
         public AdminDashboard()
         {
             InitializeComponent();
+            this.Load += AdminDashboard_Load;
+
             usTongQuan ucTongQuan = new usTongQuan();
             AddUserControl(ucTongQuan);
+        }
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+            if (manager.Public.Session.CurrentUser != null)
+            {
+                labelUser.Text = "Hi. " + manager.Public.Session.CurrentUser.FullName;
+            }
+            else
+            {
+                labelUser.Text = "Hi. Guest (Kho vẫn trống)";
+            }
+        }
+        private void LoadUserSession()
+        {
+            if (Session.CurrentUser != null)
+            {
+                labelUser.Text = Session.CurrentUser.FullName;
+            }
         }
 
         private void AddUserControl(UserControl userControl)
@@ -68,15 +87,9 @@ namespace manager.Views.Admin
             ActivateButton(sender);
             usTongQuan ucTongQuan = new usTongQuan();
             AddUserControl(ucTongQuan);
-        }
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            usTeacher ucTeacher = new usTeacher();
-            AddUserControl(ucTeacher);
+            ucTongQuan.LoadStatistics();
         }
-
 
         private void iconButton2_Click(object sender, EventArgs e)
         {

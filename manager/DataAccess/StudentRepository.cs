@@ -78,7 +78,10 @@ namespace manager.DataAccess
 
             return _studentCollection.Find(filter).ToList();
         }
-
+        public long GetStudentCount()
+        {
+            return _studentCollection.CountDocuments(new MongoDB.Bson.BsonDocument());
+        }
         // 7. Kiểm tra MSSV trùng
         public bool IsMSSVExists(string mssv)
         {

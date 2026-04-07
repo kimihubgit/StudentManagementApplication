@@ -46,7 +46,10 @@ namespace manager.DataAccess
 
             _ClassroomCollection.UpdateOne(filter, update);
         }
-
+        public long GetClassCount()
+        {
+            return _ClassroomCollection.CountDocuments(new MongoDB.Bson.BsonDocument());
+        }
         public void DeleteClassRoom(string id)
         {
             var filter = Builders<ClassRoom>.Filter.Eq("_id", ObjectId.Parse(id));

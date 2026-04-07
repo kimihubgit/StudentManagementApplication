@@ -30,14 +30,14 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
-            label4 = new Label();
             label5 = new Label();
             panel2 = new Panel();
-            label1 = new Label();
+            countTeacher = new Label();
             label3 = new Label();
             panel1 = new Panel();
-            label2 = new Label();
+            countStudent = new Label();
             svtotal = new Label();
+            countClass = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -65,23 +65,12 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.GradientInactiveCaption;
-            panel3.Controls.Add(label4);
+            panel3.Controls.Add(countClass);
             panel3.Controls.Add(label5);
             panel3.Location = new Point(797, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(349, 100);
             panel3.TabIndex = 4;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.HotTrack;
-            label4.Location = new Point(21, 52);
-            label4.Name = "label4";
-            label4.Size = new Size(29, 32);
-            label4.TabIndex = 3;
-            label4.Text = "0";
             // 
             // label5
             // 
@@ -89,30 +78,30 @@
             label5.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(21, 14);
             label5.Name = "label5";
-            label5.Size = new Size(130, 24);
+            label5.Size = new Size(176, 24);
             label5.TabIndex = 2;
-            label5.Text = "Số Sinh Viên";
+            label5.Text = "Số Lớp Học Phần";
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.GradientInactiveCaption;
-            panel2.Controls.Add(label1);
+            panel2.Controls.Add(countTeacher);
             panel2.Controls.Add(label3);
             panel2.Location = new Point(400, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(350, 100);
             panel2.TabIndex = 4;
             // 
-            // label1
+            // countTeacher
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.HotTrack;
-            label1.Location = new Point(21, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(29, 32);
-            label1.TabIndex = 3;
-            label1.Text = "0";
+            countTeacher.AutoSize = true;
+            countTeacher.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            countTeacher.ForeColor = SystemColors.HotTrack;
+            countTeacher.Location = new Point(21, 52);
+            countTeacher.Name = "countTeacher";
+            countTeacher.Size = new Size(29, 32);
+            countTeacher.TabIndex = 3;
+            countTeacher.Text = "0";
             // 
             // label3
             // 
@@ -120,30 +109,30 @@
             label3.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(21, 14);
             label3.Name = "label3";
-            label3.Size = new Size(130, 24);
+            label3.Size = new Size(144, 24);
             label3.TabIndex = 2;
-            label3.Text = "Số Sinh Viên";
+            label3.Text = "Số Giảng Viên";
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.GradientInactiveCaption;
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(countStudent);
             panel1.Controls.Add(svtotal);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(349, 100);
             panel1.TabIndex = 0;
             // 
-            // label2
+            // countStudent
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.HotTrack;
-            label2.Location = new Point(21, 52);
-            label2.Name = "label2";
-            label2.Size = new Size(29, 32);
-            label2.TabIndex = 3;
-            label2.Text = "0";
+            countStudent.AutoSize = true;
+            countStudent.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            countStudent.ForeColor = SystemColors.HotTrack;
+            countStudent.Location = new Point(21, 52);
+            countStudent.Name = "countStudent";
+            countStudent.Size = new Size(29, 32);
+            countStudent.TabIndex = 3;
+            countStudent.Text = "0";
             // 
             // svtotal
             // 
@@ -154,6 +143,17 @@
             svtotal.Size = new Size(130, 24);
             svtotal.TabIndex = 2;
             svtotal.Text = "Số Sinh Viên";
+            // 
+            // countClass
+            // 
+            countClass.AutoSize = true;
+            countClass.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            countClass.ForeColor = SystemColors.HotTrack;
+            countClass.Location = new Point(21, 52);
+            countClass.Name = "countClass";
+            countClass.Size = new Size(29, 32);
+            countClass.TabIndex = 4;
+            countClass.Text = "0";
             // 
             // usTongQuan
             // 
@@ -180,10 +180,11 @@
         private Label label4;
         private Label label5;
         private Panel panel2;
-        private Label label1;
+        private Label countTeacher;
         private Label label3;
         private Panel panel1;
-        private Label label2;
+        private Label countStudent;
         private Label svtotal;
+        private Label countClass;
     }
 }

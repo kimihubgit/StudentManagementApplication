@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using manager.Public;
 
 namespace manager.Views.Auth
 {
@@ -45,6 +46,7 @@ namespace manager.Views.Auth
                 {
                     MessageBox.Show($"Đăng nhập thành công! Chào mừng {userAccount.FullName}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoggedInUser = userAccount;
+                    manager.Public.Session.CurrentUser = userAccount;
 
                     this.DialogResult = DialogResult.OK;
                     this.Close();
