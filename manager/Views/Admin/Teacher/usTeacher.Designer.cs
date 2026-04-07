@@ -44,9 +44,10 @@
             cboFaculty = new ComboBox();
             txtSearch = new TextBox();
             btnSearch = new Button();
-            btnAdd = new Button();
-            btnDelete = new Button();
             btnBack = new Button();
+            btnEdit = new Button();
+            btnAdd = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvTeachers).BeginInit();
             SuspendLayout();
             // 
@@ -70,10 +71,11 @@
             // 
             dgvTeachers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTeachers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTeachers.Location = new Point(30, 203);
+            dgvTeachers.Location = new Point(25, 227);
             dgvTeachers.Name = "dgvTeachers";
-            dgvTeachers.Size = new Size(1011, 360);
+            dgvTeachers.Size = new Size(1026, 360);
             dgvTeachers.TabIndex = 2;
+            dgvTeachers.CellClick += dgvTeachers_CellClick;
             // 
             // txtEmail
             // 
@@ -144,7 +146,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(28, 587);
+            label7.Location = new Point(17, 615);
             label7.Name = "label7";
             label7.Size = new Size(80, 15);
             label7.TabIndex = 11;
@@ -169,40 +171,19 @@
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(113, 584);
+            txtSearch.Location = new Point(102, 612);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(404, 23);
             txtSearch.TabIndex = 14;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(569, 578);
+            btnSearch.Location = new Point(523, 608);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(83, 29);
             btnSearch.TabIndex = 15;
             btnSearch.Text = "Tìm";
             btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
-            // 
-            // btnAdd
-            // 
-            btnAdd.Location = new Point(678, 578);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(87, 29);
-            btnAdd.TabIndex = 16;
-            btnAdd.Text = "Thêm";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(787, 578);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(81, 29);
-            btnDelete.TabIndex = 17;
-            btnDelete.Text = "Xóa";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
             // 
             // btnBack
             // 
@@ -212,15 +193,45 @@
             btnBack.TabIndex = 18;
             btnBack.Text = "Quay lại";
             btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Location = new Point(166, 180);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(81, 29);
+            btnEdit.TabIndex = 20;
+            btnEdit.Text = "Sữa";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Location = new Point(57, 180);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(87, 29);
+            btnAdd.TabIndex = 19;
+            btnAdd.Text = "Thêm";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(266, 180);
+            button1.Name = "button1";
+            button1.Size = new Size(81, 29);
+            button1.TabIndex = 21;
+            button1.Text = "Xóa";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnDelete_Click;
             // 
             // usTeacher
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnBack);
-            Controls.Add(btnDelete);
+            Controls.Add(button1);
+            Controls.Add(btnEdit);
             Controls.Add(btnAdd);
+            Controls.Add(btnBack);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
             Controls.Add(cboFaculty);
@@ -262,8 +273,9 @@
         private ComboBox cboFaculty;
         private TextBox txtSearch;
         private Button btnSearch;
-        private Button btnAdd;
-        private Button btnDelete;
         private Button btnBack;
+        private Button btnEdit;
+        private Button btnAdd;
+        private Button button1;
     }
 }

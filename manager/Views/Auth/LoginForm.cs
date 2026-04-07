@@ -25,9 +25,9 @@ namespace manager.Views.Auth
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            //string hashCuaSo1 = BCrypt.Net.BCrypt.HashPassword("admin");
+            //string hashCuaSo1 = BCrypt.Net.BCrypt.HashPassword("student");
             //MessageBox.Show(hashCuaSo1);
-            //System.Diagnostics.Debug.WriteLine("=== Hash ===: " + hashFast);
+            //System.Diagnostics.Debug.WriteLine("=== Hash ===: " + hashCuaSo1);
 
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();

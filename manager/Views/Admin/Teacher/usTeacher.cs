@@ -20,7 +20,7 @@ namespace manager.Views.Admin.Teacher
         public usTeacher()
         {
             InitializeComponent();
-            
+
             _teacherCollection = new Manager_Student.DataAccess.TeacherRepository();
             _facultyCollection = new FacultyRepository();
 
@@ -33,7 +33,7 @@ namespace manager.Views.Admin.Teacher
             List<Manager_Student.Models.Faculty> listKhoa = _facultyCollection.GetAllFaculties();
             cboFaculty.DataSource = listKhoa;
             cboFaculty.DisplayMember = "FacultyName";
-            cboFaculty.ValueMember = "Id"; 
+            cboFaculty.ValueMember = "Id";
         }
 
         private void LoadData()
@@ -56,13 +56,6 @@ namespace manager.Views.Admin.Teacher
             if (cboFaculty.Items.Count > 0) cboFaculty.SelectedIndex = 0;
             _selectedId = "";
         }
-
-        //private void LoadTeacherList()
-        //{
-        //    dgvTeachers.DataSource = null;
-        //    dgvTeachers.DataSource = _teacherCollection.GetAllTeachers();
-        //}
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtTeacherCode.Text) || string.IsNullOrWhiteSpace(txtFullName.Text))
@@ -71,15 +64,6 @@ namespace manager.Views.Admin.Teacher
                 return;
             }
             var teacher = new Models.Teacher
-            //{
-            //    FullName = txtFullName.Text,
-            //    Email = txtEmail.Text,
-            //    Phone = txtPhone.Text,
-            //    TeacherCode = txtTeacherCode.Text,
-            //    Degree = cboDegree.Text,
-            //    FacultyId = cboFaculty.SelectedValue.ToString()
-            //};
-
             {
                 TeacherCode = txtTeacherCode.Text.Trim(),
                 FullName = txtFullName.Text.Trim(),
@@ -162,14 +146,6 @@ namespace manager.Views.Admin.Teacher
         {
             if (e.RowIndex >= 0)
             {
-                //DataGridViewRow row = dgvTeachers.Rows[e.RowIndex];
-                //txtFullName.Text = row.Cells["FullName"].Value.ToString();
-                //txtEmail.Text = row.Cells["Email"].Value.ToString();
-                //txtPhone.Text = row.Cells["Phone"].Value.ToString();
-                //txtTeacherCode.Text = row.Cells["TeacherCode"].Value.ToString();
-                //cboDegree.Text = row.Cells["Degree"].Value.ToString();
-                //cboFaculty.SelectedValue = row.Cells["FacultyId"].Value;
-
                 DataGridViewRow row = dgvTeachers.Rows[e.RowIndex];
 
                 _selectedId = row.Cells["Id"].Value.ToString();
@@ -183,18 +159,8 @@ namespace manager.Views.Admin.Teacher
                     cboFaculty.SelectedValue = row.Cells["FacultyId"].Value.ToString();
                 }
 
-                 if (row.Cells["Degree"].Value != null) cboDegree.Text = row.Cells["Degree"].Value.ToString();
+                if (row.Cells["Degree"].Value != null) cboDegree.Text = row.Cells["Degree"].Value.ToString();
             }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string keyword = txtSearch.Text;
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
         }
     }
 }

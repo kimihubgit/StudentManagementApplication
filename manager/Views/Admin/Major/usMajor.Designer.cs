@@ -1,4 +1,4 @@
-namespace manager.Views.Admin.Major
+ï»¿namespace manager.Views.Admin.Major
 {
     partial class usMajor
     {
@@ -39,141 +39,139 @@ namespace manager.Views.Admin.Major
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvChuyenNganh = new System.Windows.Forms.DataGridView();
-            this.txtMaChuyenNganh = new System.Windows.Forms.TextBox();
-            this.txtTenChuyenNganh = new System.Windows.Forms.TextBox();
-            this.cbKhoa = new System.Windows.Forms.ComboBox();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.lblMa = new System.Windows.Forms.Label();
-            this.lblTen = new System.Windows.Forms.Label();
-            this.lblKhoa = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenNganh)).BeginInit();
+            dgvChuyenNganh = new DataGridView();
+            txtMaChuyenNganh = new TextBox();
+            txtTenChuyenNganh = new TextBox();
+            cbKhoa = new ComboBox();
+            btnLamMoi = new Button();
+            btnThem = new Button();
+            btnSua = new Button();
+            btnXoa = new Button();
+            lblMa = new Label();
+            lblTen = new Label();
+            lblKhoa = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvChuyenNganh).BeginInit();
             SuspendLayout();
             // 
             // dgvChuyenNganh
             // 
-            this.dgvChuyenNganh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvChuyenNganh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChuyenNganh.Location = new System.Drawing.Point(20, 120);
-            this.dgvChuyenNganh.Name = "dgvChuyenNganh";
-            this.dgvChuyenNganh.RowTemplate.Height = 25;
-            this.dgvChuyenNganh.Size = new System.Drawing.Size(1033, 560);
-            this.dgvChuyenNganh.TabIndex = 0;
-            this.dgvChuyenNganh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChuyenNganh_CellClick);
+            dgvChuyenNganh.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvChuyenNganh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvChuyenNganh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvChuyenNganh.Location = new Point(20, 120);
+            dgvChuyenNganh.Name = "dgvChuyenNganh";
+            dgvChuyenNganh.Size = new Size(1033, 560);
+            dgvChuyenNganh.TabIndex = 0;
+            dgvChuyenNganh.CellClick += dgvChuyenNganh_CellClick;
             // 
             // txtMaChuyenNganh
             // 
-            this.txtMaChuyenNganh.Location = new System.Drawing.Point(120, 20);
-            this.txtMaChuyenNganh.Name = "txtMaChuyenNganh";
-            this.txtMaChuyenNganh.Size = new System.Drawing.Size(240, 23);
-            this.txtMaChuyenNganh.TabIndex = 1;
+            txtMaChuyenNganh.Location = new Point(129, 20);
+            txtMaChuyenNganh.Name = "txtMaChuyenNganh";
+            txtMaChuyenNganh.Size = new Size(240, 23);
+            txtMaChuyenNganh.TabIndex = 1;
             // 
             // txtTenChuyenNganh
             // 
-            this.txtTenChuyenNganh.Location = new System.Drawing.Point(120, 55);
-            this.txtTenChuyenNganh.Name = "txtTenChuyenNganh";
-            this.txtTenChuyenNganh.Size = new System.Drawing.Size(240, 23);
-            this.txtTenChuyenNganh.TabIndex = 2;
+            txtTenChuyenNganh.Location = new Point(131, 55);
+            txtTenChuyenNganh.Name = "txtTenChuyenNganh";
+            txtTenChuyenNganh.Size = new Size(240, 23);
+            txtTenChuyenNganh.TabIndex = 2;
             // 
             // cbKhoa
             // 
-            this.cbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(520, 20);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(240, 23);
-            this.cbKhoa.TabIndex = 3;
+            cbKhoa.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbKhoa.FormattingEnabled = true;
+            cbKhoa.Location = new Point(520, 20);
+            cbKhoa.Name = "cbKhoa";
+            cbKhoa.Size = new Size(240, 23);
+            cbKhoa.TabIndex = 3;
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(520, 55);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(75, 25);
-            this.btnLamMoi.TabIndex = 4;
-            this.btnLamMoi.Text = "Làm m?i";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            btnLamMoi.Location = new Point(520, 55);
+            btnLamMoi.Name = "btnLamMoi";
+            btnLamMoi.Size = new Size(94, 36);
+            btnLamMoi.TabIndex = 4;
+            btnLamMoi.Text = "LÃ m Má»›i";
+            btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(620, 55);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 25);
-            this.btnThem.TabIndex = 5;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            btnThem.Location = new Point(620, 55);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(94, 36);
+            btnThem.TabIndex = 5;
+            btnThem.Text = "ThÃªm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(720, 55);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 25);
-            this.btnSua.TabIndex = 6;
-            this.btnSua.Text = "S?a";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            btnSua.Location = new Point(720, 55);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(94, 36);
+            btnSua.TabIndex = 6;
+            btnSua.Text = "Sá»­a";
+            btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(820, 55);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 25);
-            this.btnXoa.TabIndex = 7;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            btnXoa.Location = new Point(820, 55);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(90, 36);
+            btnXoa.TabIndex = 7;
+            btnXoa.Text = "XÃ³a";
+            btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // lblMa
             // 
-            this.lblMa.AutoSize = true;
-            this.lblMa.Location = new System.Drawing.Point(20, 23);
-            this.lblMa.Name = "lblMa";
-            this.lblMa.Size = new System.Drawing.Size(94, 15);
-            this.lblMa.TabIndex = 8;
-            this.lblMa.Text = "Mã chuyên ngành";
+            lblMa.AutoSize = true;
+            lblMa.Location = new Point(20, 23);
+            lblMa.Name = "lblMa";
+            lblMa.Size = new Size(103, 15);
+            lblMa.TabIndex = 8;
+            lblMa.Text = "MÃ£ chuyÃªn ngÃ nh";
             // 
             // lblTen
             // 
-            this.lblTen.AutoSize = true;
-            this.lblTen.Location = new System.Drawing.Point(20, 58);
-            this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(100, 15);
-            this.lblTen.TabIndex = 9;
-            this.lblTen.Text = "Tên chuyên ngành";
+            lblTen.AutoSize = true;
+            lblTen.Location = new Point(20, 58);
+            lblTen.Name = "lblTen";
+            lblTen.Size = new Size(105, 15);
+            lblTen.TabIndex = 9;
+            lblTen.Text = "TÃªn chuyÃªn ngÃ nh";
             // 
             // lblKhoa
             // 
-            this.lblKhoa.AutoSize = true;
-            this.lblKhoa.Location = new System.Drawing.Point(440, 23);
-            this.lblKhoa.Name = "lblKhoa";
-            this.lblKhoa.Size = new System.Drawing.Size(32, 15);
-            this.lblKhoa.TabIndex = 10;
-            this.lblKhoa.Text = "Khoa";
+            lblKhoa.AutoSize = true;
+            lblKhoa.Location = new Point(480, 20);
+            lblKhoa.Name = "lblKhoa";
+            lblKhoa.Size = new Size(34, 15);
+            lblKhoa.TabIndex = 10;
+            lblKhoa.Text = "Khoa";
             // 
             // usMajor
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(this.lblKhoa);
-            Controls.Add(this.lblTen);
-            Controls.Add(this.lblMa);
-            Controls.Add(this.btnXoa);
-            Controls.Add(this.btnSua);
-            Controls.Add(this.btnThem);
-            Controls.Add(this.btnLamMoi);
-            Controls.Add(this.cbKhoa);
-            Controls.Add(this.txtTenChuyenNganh);
-            Controls.Add(this.txtMaChuyenNganh);
-            Controls.Add(this.dgvChuyenNganh);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lblKhoa);
+            Controls.Add(lblTen);
+            Controls.Add(lblMa);
+            Controls.Add(btnXoa);
+            Controls.Add(btnSua);
+            Controls.Add(btnThem);
+            Controls.Add(btnLamMoi);
+            Controls.Add(cbKhoa);
+            Controls.Add(txtTenChuyenNganh);
+            Controls.Add(txtMaChuyenNganh);
+            Controls.Add(dgvChuyenNganh);
             Name = "usMajor";
-            Size = new System.Drawing.Size(1073, 705);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenNganh)).EndInit();
+            Size = new Size(1073, 705);
+            ((System.ComponentModel.ISupportInitialize)dgvChuyenNganh).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
