@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Student\" />
+    <Folder Include="Views\Student\Temp\" />
   </ItemGroup>
 
   <ItemGroup>
