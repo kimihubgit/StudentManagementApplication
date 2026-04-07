@@ -171,6 +171,7 @@
             Controls.Add(dgvChuyenNganh);
             Name = "usMajor";
             Size = new Size(1073, 705);
+            Load += usMajor_Load;
             ((System.ComponentModel.ISupportInitialize)dgvChuyenNganh).EndInit();
             ResumeLayout(false);
             PerformLayout();

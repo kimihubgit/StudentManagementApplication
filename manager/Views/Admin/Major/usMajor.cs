@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,7 +54,7 @@ namespace manager.Views.Admin.Major
         {
             if (string.IsNullOrWhiteSpace(txtMaChuyenNganh.Text) || string.IsNullOrWhiteSpace(txtTenChuyenNganh.Text) || cbKhoa.SelectedItem == null)
             {
-                MessageBox.Show("Vui lÚng nh?p ??y ?? thÙng tin!", "C?nh b·o", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui l√≤ng nh·∫≠p ƒë·∫ßy ƒë·ªß th√¥ng tin!", "C·∫£nh b√°o", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -66,7 +66,7 @@ namespace manager.Views.Admin.Major
             };
 
             _majorRepo.InsertMajor(newMajor);
-            MessageBox.Show("ThÍm chuyÍn ng‡nh th‡nh cÙng!", "ThÙng b·o");
+            MessageBox.Show("Th√™m chuy√™n ng√†nh th√†nh c√¥ng!", "Th√¥ng b√°o");
             LoadData();
             btnLamMoi_Click(sender, e);
         }
@@ -91,7 +91,7 @@ namespace manager.Views.Admin.Major
         {
             if (string.IsNullOrEmpty(_selectedId))
             {
-                MessageBox.Show("Vui lÚng ch?n m?t chuyÍn ng‡nh trÍn b?ng ?? s?a!", "ThÙng b·o");
+                MessageBox.Show("Vui l√≤ng ch·ªçn m·ªôt chuy√™n ng√†nh tr√™n b·∫£ng!", "Th√¥ng b√°o");
                 return;
             }
 
@@ -102,7 +102,7 @@ namespace manager.Views.Admin.Major
                 FacultyId = cbKhoa.SelectedValue.ToString()
             };
             _majorRepo.UpdateMajor(_selectedId, updateMajor);
-            MessageBox.Show("C?p nh?t th‡nh cÙng!", "ThÙng b·o");
+            MessageBox.Show("C·∫≠p nh·∫≠t th√†nh c√¥ng!", "Th√¥ng b√°o");
             LoadData();
             btnLamMoi_Click(sender, e);
         }
@@ -111,18 +111,23 @@ namespace manager.Views.Admin.Major
         {
             if (string.IsNullOrEmpty(_selectedId))
             {
-                MessageBox.Show("Vui lÚng ch?n m?t chuyÍn ng‡nh trÍn b?ng ?? xÛa!", "ThÙng b·o");
+                MessageBox.Show("Vui l√≤ng ch·ªçn m·ªôt chuy√™n ng√†nh tr√™n b·∫£ng!", "Th√¥ng b√°o");
                 return;
             }
 
-            DialogResult result = MessageBox.Show("B?n cÛ ch?c ch?n mu?n xÛa chuyÍn ng‡nh n‡y?", "X·c nh?n", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("B·∫°n c√≥ ch·∫Øc ch·∫Øn mu·ªën x√≥a chuy√™n ng√†nh n√†y?", "X√°c nh·∫≠n", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 _majorRepo.DeleteMajor(_selectedId);
-                MessageBox.Show("XÛa th‡nh cÙng!", "ThÙng b·o");
+                MessageBox.Show("X√≥a th√†nh c√¥ng!", "Th√¥ng b√°o");
                 LoadData();
                 btnLamMoi_Click(sender, e);
             }
+        }
+
+        private void usMajor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

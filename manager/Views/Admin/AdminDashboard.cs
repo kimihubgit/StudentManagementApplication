@@ -135,5 +135,12 @@ namespace manager.Views.Admin
             manager.Views.Admin.Major.usMajor ucMajor = new manager.Views.Admin.Major.usMajor();
             AddUserControl(ucMajor);
         }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            manager.Views.Admin.Semester.usSemester uc = new manager.Views.Admin.Semester.usSemester();
+            AddUserControl(uc);
+        }
     }
 }
