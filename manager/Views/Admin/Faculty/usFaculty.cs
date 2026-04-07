@@ -83,17 +83,26 @@ namespace manager.Views.Admin.Faculty
                 return;
             }
 
-            var updateFaculty = new Manager_Student.Models.Faculty
+            try
             {
-                FacultyCode = txtMaKhoa.Text.Trim(),
-                FacultyName = txtTenKhoa.Text.Trim(),
-                FoundedYear = dtpNgayThanhLap.Value
-            };
-            _facultyRepo.UpdateFaculty(_selectedId, updateFaculty);
+                var updateFaculty = new Manager_Student.Models.Faculty
+                {
+                    Id = _selectedId,
+                    FacultyCode = txtMaKhoa.Text.Trim(),
+                    FacultyName = txtTenKhoa.Text.Trim(),
+                    FoundedYear = dtpNgayThanhLap.Value
+                };
 
-            MessageBox.Show("Cập nhật thành công!", "Thông báo");
-            LoadData();
-            btnLamMoi_Click(sender, e);
+                _facultyRepo.UpdateFaculty(_selectedId, updateFaculty);
+
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
+                LoadData();
+                btnLamMoi_Click(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật: " + ex.Message);
+            }
         }
 
 
@@ -113,16 +122,6 @@ namespace manager.Views.Admin.Faculty
                 LoadData();
                 btnLamMoi_Click(sender, e);
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvKhoa_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

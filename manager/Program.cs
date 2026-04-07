@@ -1,5 +1,6 @@
 using manager.Views.Auth;
 using manager.Views.Admin;
+using manager.Views.Teacher;
 namespace manager
 {
     internal static class Program
@@ -24,7 +25,7 @@ namespace manager
                 }
                 else if (user.Role == "Teacher")
                 {
-                    //Application.Run(new TeacherForm());
+                    Application.Run(new TeachDashboard());
                 }
                 else if (user.Role == "Student")
                 {

@@ -123,7 +123,6 @@
             txtMaKhoa.Name = "txtMaKhoa";
             txtMaKhoa.Size = new Size(221, 23);
             txtMaKhoa.TabIndex = 7;
-            txtMaKhoa.TextChanged += textBox1_TextChanged;
             // 
             // txtTenKhoa
             // 
@@ -178,6 +177,7 @@
             dgvKhoa.RowHeadersWidth = 51;
             dgvKhoa.Size = new Size(889, 349);
             dgvKhoa.TabIndex = 13;
+            dgvKhoa.CellClick += dgvKhoa_CellClick;
             // 
             // usFaculty
             // 
