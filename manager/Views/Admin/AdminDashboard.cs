@@ -6,17 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
-using FontAwesome.Sharp;
 using manager.Public;
-using manager.Views.Admin;
 using manager.Views.Admin;
 using manager.Views.Admin.Faculty;
 using manager.Views.Admin.Major;
 using manager.Views.Admin.Student;
 using manager.Views.Admin.Subject;
 using manager.Views.Admin.Teacher;
-using manager.Views.Admin.Teacher;
-using manager.Views.Admin.TongQuan;
 using manager.Views.Admin.TongQuan;
 
 namespace manager.Views.Admin

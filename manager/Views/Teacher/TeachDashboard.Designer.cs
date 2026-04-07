@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
             iconButton5 = new FontAwesome.Sharp.IconButton();
+            iconButton4 = new FontAwesome.Sharp.IconButton();
+            iconButton3 = new FontAwesome.Sharp.IconButton();
+            iconButton2 = new FontAwesome.Sharp.IconButton();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
-            label1 = new Label();
+            labelUser = new Label();
             pictureBox2 = new PictureBox();
             panel3 = new Panel();
             panel1.SuspendLayout();
@@ -57,62 +57,24 @@
             panel1.Size = new Size(238, 761);
             panel1.TabIndex = 0;
             // 
-            // iconButton1
+            // iconButton5
             // 
-            iconButton1.Dock = DockStyle.Top;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton1.ForeColor = SystemColors.Control;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.House;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 30;
-            iconButton1.Location = new Point(0, 0);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(238, 59);
-            iconButton1.TabIndex = 3;
-            iconButton1.Text = "Tổng Quan";
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // iconButton2
-            // 
-            iconButton2.Dock = DockStyle.Top;
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton2.ForeColor = SystemColors.Control;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.House;
-            iconButton2.IconColor = Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 30;
-            iconButton2.Location = new Point(0, 59);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(238, 59);
-            iconButton2.TabIndex = 4;
-            iconButton2.Text = "Tổng Quan";
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton3
-            // 
-            iconButton3.Dock = DockStyle.Top;
-            iconButton3.FlatAppearance.BorderSize = 0;
-            iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton3.ForeColor = SystemColors.Control;
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.House;
-            iconButton3.IconColor = Color.White;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.IconSize = 30;
-            iconButton3.Location = new Point(0, 118);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(238, 59);
-            iconButton3.TabIndex = 5;
-            iconButton3.Text = "Tổng Quan";
-            iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton3.UseVisualStyleBackColor = true;
+            iconButton5.Dock = DockStyle.Top;
+            iconButton5.FlatAppearance.BorderSize = 0;
+            iconButton5.FlatStyle = FlatStyle.Flat;
+            iconButton5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton5.ForeColor = SystemColors.Control;
+            iconButton5.IconChar = FontAwesome.Sharp.IconChar.House;
+            iconButton5.IconColor = Color.White;
+            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton5.IconSize = 30;
+            iconButton5.Location = new Point(0, 236);
+            iconButton5.Name = "iconButton5";
+            iconButton5.Size = new Size(238, 59);
+            iconButton5.TabIndex = 7;
+            iconButton5.Text = "Tổng Quan";
+            iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton5.UseVisualStyleBackColor = true;
             // 
             // iconButton4
             // 
@@ -133,28 +95,66 @@
             iconButton4.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton4.UseVisualStyleBackColor = true;
             // 
-            // iconButton5
+            // iconButton3
             // 
-            iconButton5.Dock = DockStyle.Top;
-            iconButton5.FlatAppearance.BorderSize = 0;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton5.ForeColor = SystemColors.Control;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.House;
-            iconButton5.IconColor = Color.White;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 30;
-            iconButton5.Location = new Point(0, 236);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(238, 59);
-            iconButton5.TabIndex = 7;
-            iconButton5.Text = "Tổng Quan";
-            iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton5.UseVisualStyleBackColor = true;
+            iconButton3.Dock = DockStyle.Top;
+            iconButton3.FlatAppearance.BorderSize = 0;
+            iconButton3.FlatStyle = FlatStyle.Flat;
+            iconButton3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton3.ForeColor = SystemColors.Control;
+            iconButton3.IconChar = FontAwesome.Sharp.IconChar.House;
+            iconButton3.IconColor = Color.White;
+            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton3.IconSize = 30;
+            iconButton3.Location = new Point(0, 118);
+            iconButton3.Name = "iconButton3";
+            iconButton3.Size = new Size(238, 59);
+            iconButton3.TabIndex = 5;
+            iconButton3.Text = "Tổng Quan";
+            iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton3.UseVisualStyleBackColor = true;
+            // 
+            // iconButton2
+            // 
+            iconButton2.Dock = DockStyle.Top;
+            iconButton2.FlatAppearance.BorderSize = 0;
+            iconButton2.FlatStyle = FlatStyle.Flat;
+            iconButton2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton2.ForeColor = SystemColors.Control;
+            iconButton2.IconChar = FontAwesome.Sharp.IconChar.House;
+            iconButton2.IconColor = Color.White;
+            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton2.IconSize = 30;
+            iconButton2.Location = new Point(0, 59);
+            iconButton2.Name = "iconButton2";
+            iconButton2.Size = new Size(238, 59);
+            iconButton2.TabIndex = 4;
+            iconButton2.Text = "Tổng Quan";
+            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            iconButton1.Dock = DockStyle.Top;
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = FlatStyle.Flat;
+            iconButton1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton1.ForeColor = SystemColors.Control;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.House;
+            iconButton1.IconColor = Color.White;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 30;
+            iconButton1.Location = new Point(0, 0);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(238, 59);
+            iconButton1.TabIndex = 3;
+            iconButton1.Text = "Tổng Quan";
+            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton1.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            panel2.Controls.Add(label1);
+            panel2.Controls.Add(labelUser);
             panel2.Controls.Add(pictureBox2);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(238, 0);
@@ -162,15 +162,15 @@
             panel2.Size = new Size(1073, 59);
             panel2.TabIndex = 1;
             // 
-            // label1
+            // labelUser
             // 
-            label1.Anchor = AnchorStyles.Right;
-            label1.Location = new Point(865, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(145, 23);
-            label1.TabIndex = 3;
-            label1.Text = "Hi. Noname";
-            label1.TextAlign = ContentAlignment.MiddleRight;
+            labelUser.Anchor = AnchorStyles.Right;
+            labelUser.Location = new Point(865, 18);
+            labelUser.Name = "labelUser";
+            labelUser.Size = new Size(145, 23);
+            labelUser.TabIndex = 3;
+            labelUser.Text = "Hi. Noname";
+            labelUser.TextAlign = ContentAlignment.MiddleRight;
             // 
             // pictureBox2
             // 
@@ -216,7 +216,7 @@
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel2;
-        private Label label1;
+        private Label labelUser;
         private PictureBox pictureBox2;
         private Panel panel3;
     }
