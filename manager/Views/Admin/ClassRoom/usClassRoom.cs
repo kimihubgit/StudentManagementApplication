@@ -1,11 +1,17 @@
-﻿using manager.DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+
+using manager.DataAccess;
+using Manager_Student.DataAccess;
+using Manager_Student.Models;
+using manager.Models;
+
+
 
 namespace manager.Views.Admin.ClassRoom
 {
@@ -14,7 +20,7 @@ namespace manager.Views.Admin.ClassRoom
         private readonly ClassroomRepository _classRepo;
         private readonly MajorRepository _majorRepo;
         private readonly TeacherRepository _teacherRepo;
-        private string _selectedId = ""; // Lưu trữ ObjectId của MongoDB
+        private string _selectedId = "";
 
         public usClassRoom()
         {
@@ -28,7 +34,28 @@ namespace manager.Views.Admin.ClassRoom
             nmrAcademicYear.Value = DateTime.Now.Year >= 2000 && DateTime.Now.Year <= 2050
                                     ? DateTime.Now.Year : 2024;
 
+            LoadComboBoxNganh();
+            LoadComboBoxGVCN();
+            LoadData();
 
+
+        }
+
+        private void LoadComboBoxNganh()
+        {
+            List<Manager_Student.Models.Major> listMajor = _majorRepo.GetAllMajors();
+            txtMajorId.DataSource = listMajor;
+            txtMajorId.DisplayMember = "MajorName";
+            txtMajorId.ValueMember = "Id";
+        }
+
+
+        private void LoadComboBoxGVCN()
+        {
+            List<Models.Teacher> listTeacher = _teacherRepo.GetAllTeachers();
+            txtTeacherId.DataSource = listTeacher;
+            txtTeacherId.DisplayMember = "FullName";
+            txtTeacherId.ValueMember = "Id";
         }
 
         // 1. Load dữ liệu lên DataGridView
@@ -49,17 +76,25 @@ namespace manager.Views.Admin.ClassRoom
             }
         }
 
-        // 2. Load dữ liệu vào 2 ComboBox (Ngành và Giáo viên)
+        private void ClearInput()
+        {
+            txtClassCode.Clear();
+            txtClassName.Clear();
+            nmrAcademicYear.Value = DateTime.Now.Year;
+
+            if (txtMajorId.Items.Count > 0) txtMajorId.SelectedIndex = 0;
+            if (txtTeacherId.Items.Count > 0) txtTeacherId.SelectedIndex = 0;
+
+            _selectedId = "";
+            txtClassCode.Focus();
+        }
 
 
-        // 3. Reset các ô nhập liệu
         private void btnClear_Click(object sender, EventArgs e)
         {
             _selectedId = "";
             txtClassCode.Clear();
             txtClassName.Clear();
-            txtMajorId.Clear();   // Thêm dòng này
-            txtTeacherId.Clear(); // Thêm dòng này
             nmrAcademicYear.Value = 2026;
             txtClassCode.Focus();
         }
@@ -69,7 +104,7 @@ namespace manager.Views.Admin.ClassRoom
         {
             if (string.IsNullOrWhiteSpace(txtClassCode.Text) || string.IsNullOrWhiteSpace(txtClassName.Text))
             {
-                MessageBox.Show("Vui lòng điền đủ Mã lớp và Tên lớp!");
+                MessageBox.Show("Vui lòng điền đủ Mã lớp và Tên lớp!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -79,8 +114,8 @@ namespace manager.Views.Admin.ClassRoom
                 ClassName = txtClassName.Text.Trim(),
                 AcademicYear = (int)nmrAcademicYear.Value,
                 // Lấy dữ liệu trực tiếp từ TextBox
-                MajorId = txtMajorId.Text.Trim(),
-                HomeroomTeacherId = txtTeacherId.Text.Trim()
+                MajorId = txtMajorId.SelectedValue?.ToString(),
+                HomeroomTeacherId = txtTeacherId.SelectedValue?.ToString()
             };
 
             _classRepo.InsertClassRoom(newClass);
@@ -88,8 +123,6 @@ namespace manager.Views.Admin.ClassRoom
             LoadData();
             btnClear_Click(null, null);
         }
-
-        // 5. Sự kiện Cập nhật (Update)
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // CƯỜNG ÉP: Lấy ID trực tiếp từ dòng đang chọn trên Grid
@@ -112,7 +145,7 @@ namespace manager.Views.Admin.ClassRoom
             {
                 var updatedClass = new Manager_Student.Models.ClassRoom
                 {
-                    Id = _selectedId, // Phải có cái này thì MongoDB mới biết sửa dòng nào
+                    Id = _selectedId,
                     ClassCode = txtClassCode.Text.Trim(),
                     ClassName = txtClassName.Text.Trim(),
                     AcademicYear = (int)nmrAcademicYear.Value,
@@ -122,18 +155,15 @@ namespace manager.Views.Admin.ClassRoom
 
                 _classRepo.UpdateClassRoom(_selectedId, updatedClass);
                 MessageBox.Show("Sửa thành công rồi nhé!");
-                LoadData(); // Load lại bảng để thấy kết quả
+                LoadData();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi rồi: " + ex.Message);
             }
         }
-
-        // 6. Sự kiện Xóa (Delete)
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            // Cách lấy ID trực tiếp từ dòng đang chọn xanh (FullRowSelect)
             if (dgvClassRooms.CurrentRow != null)
             {
                 var row = dgvClassRooms.CurrentRow;
@@ -156,28 +186,19 @@ namespace manager.Views.Admin.ClassRoom
             {
                 _classRepo.DeleteClassRoom(_selectedId);
                 MessageBox.Show("Xóa thành công!");
-                LoadData(); // Nạp lại bảng để dòng đó biến mất
-                btnClear_Click(sender, e); // Reset form
+                LoadData();
+                btnClear_Click(sender, e);
             }
         }
 
-        // 7. Click vào DataGrid để đổ dữ liệu ngược lại các TextBox/ComboBox
         private void dgvClassRooms_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvClassRooms.Rows[e.RowIndex];
-
-                // 1. Lấy ID và lưu vào biến toàn cục
-                // Chú ý: "Id" phải khớp chính xác với tên Property trong Model ClassRoom
                 if (row.Cells["Id"].Value != null)
                 {
                     _selectedId = row.Cells["Id"].Value.ToString();
-
-                    // HIỆN THÔNG BÁO NÀY ĐỂ KIỂM TRA (Sau khi chạy được thì xóa đi)
-                    // MessageBox.Show("Đã nhận ID: " + _selectedId);
-
-                    // 2. Đổ dữ liệu lên các ô phía trên
                     txtClassCode.Text = row.Cells["ClassCode"].Value?.ToString();
                     txtClassName.Text = row.Cells["ClassName"].Value?.ToString();
                     nmrAcademicYear.Value = Convert.ToInt32(row.Cells["AcademicYear"].Value);
