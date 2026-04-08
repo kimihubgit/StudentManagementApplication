@@ -1,5 +1,7 @@
 using manager.Views.Auth;
-
+using manager.Views.Admin;
+using manager.Views.Teacher;
+using manager.Views.Student;
 namespace manager
 {
     internal static class Program
@@ -10,6 +12,7 @@ namespace manager
         [STAThread]
         static void Main()
         {
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -20,15 +23,15 @@ namespace manager
                 var user = loginForm.LoggedInUser;
                 if (user.Role == "Admin")
                 {
-                    //Application.Run(new AdminDashboard());
+                    Application.Run(new AdminDashboard());
                 }
                 else if (user.Role == "Teacher")
                 {
-                    //Application.Run(new TeacherForm());
+                    Application.Run(new TeachDashboard());
                 }
                 else if (user.Role == "Student")
                 {
-                    // Application.Run(new StudentForm()); 
+                    Application.Run(new StudentDashboard()); 
                 }
                 else
                 {

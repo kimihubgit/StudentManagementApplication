@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using manager.Public;
 
 namespace manager.Views.Auth
 {
@@ -25,9 +26,9 @@ namespace manager.Views.Auth
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            //string hashCuaSo1 = BCrypt.Net.BCrypt.HashPassword("admin");
+            //string hashCuaSo1 = BCrypt.Net.BCrypt.HashPassword("student");
             //MessageBox.Show(hashCuaSo1);
-            //System.Diagnostics.Debug.WriteLine("=== Hash ===: " + hashFast);
+            //System.Diagnostics.Debug.WriteLine("=== Hash ===: " + hashCuaSo1);
 
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
@@ -45,6 +46,7 @@ namespace manager.Views.Auth
                 {
                     MessageBox.Show($"Đăng nhập thành công! Chào mừng {userAccount.FullName}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoggedInUser = userAccount;
+                    manager.Public.Session.CurrentUser = userAccount;
 
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -65,6 +67,14 @@ namespace manager.Views.Auth
             Application.Exit();
         }
 
-        
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -50,6 +50,7 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(724, 23);
             txtUsername.TabIndex = 1;
+            txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
@@ -89,6 +90,7 @@
             Controls.Add(label1);
             Name = "LoginForm";
             Text = "LoginForm";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
