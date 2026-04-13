@@ -35,8 +35,6 @@
             label3 = new Label();
             comboBox3 = new ComboBox();
             dataGridView1 = new DataGridView();
-            button2 = new Button();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -101,30 +99,10 @@
             dataGridView1.Size = new Size(1039, 533);
             dataGridView1.TabIndex = 6;
             // 
-            // button2
-            // 
-            button2.Location = new Point(919, 651);
-            button2.Name = "button2";
-            button2.Size = new Size(140, 37);
-            button2.TabIndex = 10;
-            button2.Text = "Export";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(763, 651);
-            button1.Name = "button1";
-            button1.Size = new Size(140, 37);
-            button1.TabIndex = 9;
-            button1.Text = "Import";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // usQuanLyDiem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label3);
             Controls.Add(comboBox3);
@@ -148,7 +126,5 @@
         private Label label3;
         private ComboBox comboBox3;
         private DataGridView dataGridView1;
-        private Button button2;
-        private Button button1;
     }
 }

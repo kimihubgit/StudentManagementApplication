@@ -160,6 +160,7 @@
             // dgvClassRooms
             // 
             dgvClassRooms.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvClassRooms.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvClassRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvClassRooms.Location = new Point(25, 163);
             dgvClassRooms.MultiSelect = false;

@@ -29,24 +29,22 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
-            panel2 = new Panel();
+            panelHeader = new Panel();
             labelUser = new Label();
             pictureBox2 = new PictureBox();
-            panel3 = new Panel();
+            panel2 = new Panel();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlText;
-            panel1.Controls.Add(iconButton5);
             panel1.Controls.Add(iconButton4);
             panel1.Controls.Add(iconButton3);
             panel1.Controls.Add(iconButton2);
@@ -56,25 +54,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(238, 761);
             panel1.TabIndex = 0;
-            // 
-            // iconButton5
-            // 
-            iconButton5.Dock = DockStyle.Top;
-            iconButton5.FlatAppearance.BorderSize = 0;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton5.ForeColor = SystemColors.Control;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.House;
-            iconButton5.IconColor = Color.White;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 30;
-            iconButton5.Location = new Point(0, 236);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(238, 59);
-            iconButton5.TabIndex = 7;
-            iconButton5.Text = "Tổng Quan";
-            iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton5.UseVisualStyleBackColor = true;
             // 
             // iconButton4
             // 
@@ -91,7 +70,7 @@
             iconButton4.Name = "iconButton4";
             iconButton4.Size = new Size(238, 59);
             iconButton4.TabIndex = 6;
-            iconButton4.Text = "Tổng Quan";
+            iconButton4.Text = "Nhập Điểm";
             iconButton4.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton4.UseVisualStyleBackColor = true;
             // 
@@ -110,7 +89,7 @@
             iconButton3.Name = "iconButton3";
             iconButton3.Size = new Size(238, 59);
             iconButton3.TabIndex = 5;
-            iconButton3.Text = "Tổng Quan";
+            iconButton3.Text = "Điểm Danh";
             iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton3.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +108,7 @@
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(238, 59);
             iconButton2.TabIndex = 4;
-            iconButton2.Text = "Tổng Quan";
+            iconButton2.Text = "Quản Lí Điểm";
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = true;
             // 
@@ -152,15 +131,15 @@
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // panelHeader
             // 
-            panel2.Controls.Add(labelUser);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(238, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1073, 59);
-            panel2.TabIndex = 1;
+            panelHeader.Controls.Add(labelUser);
+            panelHeader.Controls.Add(pictureBox2);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(238, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1073, 59);
+            panelHeader.TabIndex = 1;
             // 
             // labelUser
             // 
@@ -183,26 +162,26 @@
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
-            // panel3
+            // panel2
             // 
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(238, 59);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1073, 702);
-            panel3.TabIndex = 2;
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(238, 59);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1073, 702);
+            panel2.TabIndex = 2;
             // 
             // TeachDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1311, 761);
-            Controls.Add(panel3);
             Controls.Add(panel2);
+            Controls.Add(panelHeader);
             Controls.Add(panel1);
             Name = "TeachDashboard";
             Text = "TeachDashboard";
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
+            panelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
@@ -210,14 +189,13 @@
         #endregion
 
         private Panel panel1;
-        private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private Panel panel2;
+        private Panel panelHeader;
         private Label labelUser;
         private PictureBox pictureBox2;
-        private Panel panel3;
+        private Panel panel2;
     }
 }

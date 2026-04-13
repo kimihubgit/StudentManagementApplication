@@ -1,5 +1,5 @@
-﻿using manager.DataAccess;  // Khớp với thư mục DataAccess trong ảnh
-using manager.Models;      // Khớp với thư mục Models trong ảnh
+﻿using manager.DataAccess;
+using manager.Models;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -9,31 +9,47 @@ namespace manager.Views.Admin.Student
     public partial class usStudent : UserControl
     {
         private readonly StudentRepository _studentRepo;
+        private readonly ClassroomRepository _classroomRepo;
 
         public usStudent()
         {
             InitializeComponent();
-            // Khởi tạo các Repository để làm việc với MongoDB
             _studentRepo = new StudentRepository();
+            _classroomRepo = new ClassroomRepository();
+
+            this.Load += usStudent_Load;
+            dgvStudents.CellClick += dgvStudents_CellClick;
         }
 
         private void usStudent_Load(object sender, EventArgs e)
         {
             LoadStaticData();
+            LoadClassData();
             LoadStudentGrid();
         }
 
-        #region Tải dữ liệu
-      
 
+        private void LoadClassData()
+        {
+            try
+            {
+                var classList = _classroomRepo.GetAllClassRooms();
+
+                cboClass.DataSource = classList;
+                cboClass.DisplayMember = "ClassName";
+                cboClass.ValueMember = "Id"; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải danh sách lớp học: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void LoadStaticData()
         {
-            // Load giới tính
             cboGender.Items.Clear();
             cboGender.Items.AddRange(new string[] { "Nam", "Nữ", "Khác" });
             cboGender.SelectedIndex = 0;
 
-            // Load trạng thái
             cboStatus.Items.Clear();
             cboStatus.Items.AddRange(new string[] { "Đang học", "Bảo lưu", "Tốt nghiệp" });
             cboStatus.SelectedIndex = 0;
@@ -45,8 +61,6 @@ namespace manager.Views.Admin.Student
             {
                 dgvStudents.DataSource = null;
                 dgvStudents.DataSource = _studentRepo.GetAllStudents();
-
-                // Ẩn cột Id của MongoDB để bảng gọn hơn
                 if (dgvStudents.Columns["Id"] != null)
                     dgvStudents.Columns["Id"].Visible = false;
             }
@@ -55,9 +69,6 @@ namespace manager.Views.Admin.Student
                 MessageBox.Show("Lỗi tải danh sách sinh viên: " + ex.Message);
             }
         }
-        #endregion
-
-        #region Các nút chức năng
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtMSSV.Text))
@@ -131,7 +142,6 @@ namespace manager.Views.Admin.Student
             cboGender.SelectedIndex = 0;
             cboStatus.SelectedIndex = 0;
         }
-        #endregion
 
         // Sự kiện đổ dữ liệu từ bảng lên các ô nhập khi click chuột
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
