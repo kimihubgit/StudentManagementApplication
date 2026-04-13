@@ -186,7 +186,7 @@
             iconButton3.Name = "iconButton3";
             iconButton3.Size = new Size(238, 59);
             iconButton3.TabIndex = 4;
-            iconButton3.Text = "Tổng Quan";
+            iconButton3.Text = "Học Kỳ";
             iconButton3.TextAlign = ContentAlignment.MiddleLeft;
             iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton3.UseVisualStyleBackColor = true;
